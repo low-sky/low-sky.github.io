@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-
-### More Information
+I'm an asst. professor of astrophysics at the University of Alberta, a position I use as an excuse to do fun things with data.
 
 ### Contact me
 
