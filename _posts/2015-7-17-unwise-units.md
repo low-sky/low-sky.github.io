@@ -17,7 +17,10 @@ Using the [definitions of magnitudes](https://en.wikipedia.org/wiki/AB_magnitude
 
 $$
 \begin{eqnarray}
--2.5\log_{10} \left(\frac{F_{22}}{\mathrm{Jy/pix}}\right) + 8.90 &=& -2.5\log_{10} (I) +22.5 + 6.604 \\
+-2.5\log_{10} \left(\frac{F_{22}}{\mathrm{Jy/pix}}\right) + 8.90 & = & -2.5\log_{10} (I) +22.5 + 6.604 \\
+
+\log_{10} \left(\frac{F_{22}}{\mathrm{Jy/pix}}\right) & = & \log_{10} (I) -0.4(22.5+6.604-8.90) \\
+
 \end{eqnarray}
 $$
 
