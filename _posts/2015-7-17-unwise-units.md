@@ -14,13 +14,13 @@ m_{\mathrm{AB}} = m_{\mathrm{Vega}} + 6.604
 $$
 
 Using the [definitions of magnitudes](https://en.wikipedia.org/wiki/AB_magnitude) in both cases we get
+$$
 \begin{eqnarray}
 -2.5\log_{10} \left(\frac{F_{22}}{\mathrm{Jy/pix}}\right) + 8.90 & = & -2.5\log_{10} (I) +22.5 + 6.604 \\ 
 \log_{10} \left(\frac{F_{22}}{\mathrm{Jy/pix}}\right) &= &\log_{10} (I) -0.4(22.5+6.604-8.90) \\
 \frac{F_{22}}{\mathrm{Jy/pix}} & = & 8.287\times 10^{-9} I \\
 \frac{F_{22}}{\mathrm{MJy/sr}} & = & 8.287\times 10^{-15} \frac{I}{\Omega_{\mathrm{pix}}.
 \end{eqnarray}
-
-
+$$
 
 
