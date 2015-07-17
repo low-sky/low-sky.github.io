@@ -19,8 +19,8 @@ As such,
 
 $$
 \begin{eqnarray}
--2.5\log_{10}\left( \frac{F_{\mathrm{H}\alpha}}{F_0} \right) & = & -2.5\log_{10} I + \mathrm{PHOTZP} - 0.0 \\
-F_{\mathrm{H}\alpha}} & = & 10^{-0.4*\mathrm{PHOTZP}} F_0 I 
-\end{equnarray}
+-2.5\log_{10} \left( \frac{F_{\mathrm{H}\alpha}}{F_0} \right) & = & -2.5\log_{10} I + \mathrm{PHOTZP} - 0.0 \\
+F_{\mathrm{H}\alpha} & = & 10^{-0.4\mathrm{PHOTZP}} F_0 I 
+\end{eqnarray}
 $$
 
