@@ -24,11 +24,11 @@ $$
 $$
 
 $$
-frac{F_{22}}{\mathrm{Jy/pix}} = 8.287\times 10^{-9} I 
+\frac{F_{22}}{\mathrm{Jy/pix}} = 8.287\times 10^{-9} I 
 $$
 
 $$
-\frac{F_{22}}{\mathrm{MJy/sr}} = 8.287\times 10^{-15} \frac{I}{\Omega_{\mathrm{pix}}.
+\\frac{F_{22}}{\mathrm{MJy/sr}} = 8.287\times 10^{-15} \\frac{I}{\Omega_{\mathrm{pix}}.
 $$
 
 
