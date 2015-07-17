@@ -24,3 +24,4 @@ $$
 \end{eqnarray}
 $$
 
+Here's a [gist](https://gist.github.com/low-sky/e50420b1d5de2c0999a2) implementing this.  
