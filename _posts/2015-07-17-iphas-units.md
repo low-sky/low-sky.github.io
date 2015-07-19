@@ -12,7 +12,7 @@ $$
 The [DR2 page](http://www.iphas.org/images/) gives that magnitude zero in the H$$\alpha$$ filter corresponds to 
 
 $$
-F_0 = 1.56\times 10^7~\mathrm{erg/s/cm^2}
+F_0 = 1.56\times 10^{-7}~\mathrm{erg/s/cm^2}
 $$
 
 As such,
@@ -24,3 +24,4 @@ F_{\mathrm{H}\alpha} & = & 10^{-0.4\mathrm{PHOTZP}} F_0 I
 \end{eqnarray}
 $$
 
+The final issue is pixel size.  Flux ain't surface brightness so when we rebin by a factor of 64 in pixel area, we end up needing to scale up the flux by the rebin factor.  
