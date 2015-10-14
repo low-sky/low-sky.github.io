@@ -9,7 +9,7 @@ Here are a few questions about sky motions to give practice to students in first
 	* $$70^{\circ}$$ above the northern horizon.
 2. On September 21st (today), what is the highest altitude the Sun will reach in Edmonton?
 	* $$36.5^{\circ}$$.
-3. On May 21st, the Sun transits at zenith for observers at a latitude of $$8^{\circ}$$S.  Would an observer at $$80^{\circ}$$N see the Sun above the horizon at any point?
+3. On February 21st, the Sun transits at zenith for observers at a latitude of $$8^{\circ}$$S.  Would an observer at $$80^{\circ}$$N see the Sun above the horizon at any point?
 	* Yes (briefly around noon)
 4. (setting Evil to MAXIMUM) If a total lunar eclipse was observed from Edmonton on December 21st at midnight, what would its altitude be?
 	* $$60^{\circ}$$ above the southern horizon.
