@@ -22,10 +22,9 @@ $$
 
 Given this, we'd like to restore the spectrum that would be seen under the "normal" circumstances:
 
-$$\begin{eqnarray}
+$$
+\begin{eqnarray}
 \left(\frac{F}{N}-1\right)&=&\frac{T_A}{T_{\mathrm{sys}}} \\
-\frac{F}{N} & = & 1+ \frac{T_A}{T_{\mathrm{sys}}} \\
-\frac{N}{F} & = & \left(1+ \frac{T_A}{T_{\mathrm{sys}}}\right)^{-1} \\
-T_{\mathrm{sys}}\left(\frac{N}{F}-1) & = & T_{\mathrm{sys}} \left(1+ \frac{T_A}{T_{\mathrm{sys}}}\right)^{-1}-1 \\
-T_{A,0} & = & T_{\mathrm{sys}} \left(1+ \frac{T_A}{T_{\mathrm{sys}}}\right)^{-1}-1
-\end{eqnarray}$$
+\frac{F}{N} & = & 1+ \frac{T_A}{T_{\mathrm{sys}}}
+\end{eqnarray}
+$$
