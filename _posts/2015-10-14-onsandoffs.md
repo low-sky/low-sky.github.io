@@ -28,7 +28,8 @@ $$
 \frac{F}{N} & = & 1+ \frac{T_A}{T_{\mathrm{sys}}}\\
 \frac{N}{F} & = & \left(1+ \frac{T_A}{T_{\mathrm{sys}}}\right)^{-1} \\
 T_{A,0} = \left(\frac{N}{F}-1\right) T_{\mathrm{sys}} & = &  T_{\mathrm{sys}}
-\left(\frac{1}{1+\frac{T_A}{T_{\mathrm{sys}}}}-1\right)
+\left(\frac{1}{1+\frac{T_A}{T_{\mathrm{sys}}}}-1\right).
 \end{eqnarray}
 $$
 
+Thus, if $$T_{\mathrm{sys}}$$ for every scan is known, the intended antenna temperature measurements for each scan can be recovered if the emission is processed in the OFF component of the scan.  As such, an ad hoc observing strategy that uses an OFF position where the ON position can be used to recover the original spectrum and a second spectrum from the OFF.  
