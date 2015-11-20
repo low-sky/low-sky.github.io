@@ -7,9 +7,9 @@ In teaching stellar evolution for third year students, there are a few things th
 
 ## Evolution on the Main Sequence 
 
-Stars on the main sequence are, by definition, fusing (1) hydrogen into helium (2) in their cores.  Low mass stars are fusing primarily through the $$pp$ chain and medium and high mass stars are fusing primarily through the CNO cycle.  Either way, the net effect of this fusion is to change the chemical composition in the core of the star from H into He.  Or, in terms of mass fractions, $X$ decreases toward 0, $Y$ increases toward $1-Z$.  This means that the mean particle mass is increasing:
+Stars on the main sequence are, by definition, fusing (1) hydrogen into helium (2) in their cores.  Low mass stars are fusing primarily through the $$pp$ chain and medium and high mass stars are fusing primarily through the CNO cycle.  Either way, the net effect of this fusion is to change the chemical composition in the core of the star from H into He.  Or, in terms of mass fractions, $$X$$ decreases toward 0, $$Y$$ increases toward $$1-Z$$.  This means that the mean particle mass is increasing:
 
-$$\mu^{-1} = 2X + \frac{3}{4}Y + {1}{2}Z$$.
+$$\mu^{-1} = 2X + \frac{3}{4}Y + \frac{1}{2}Z$$.
 
 Each  fusion chain reaction replaces four protons in the core with only one helium nucleus.  Since the gas pressure in a star is
 
