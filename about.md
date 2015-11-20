@@ -8,4 +8,6 @@ I'm an asst. professor of astrophysics at the University of Alberta, a position 
 
 ### Contact me
 
-rosolowsky $$@$$ ualberta.ca
+rosolowsky qq ualberta.ca
+
+where qq means @
