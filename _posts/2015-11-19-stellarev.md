@@ -16,6 +16,7 @@ U_g &=& -2 E_T\\
 T & = & \frac{3 \beta G M \mu m_{\mathrm{H}}}{k R}
 \end{eqnarray}
 $$
+
 where we have used a general form for the gravitational self energy and the constant $$\beta$$ is a constant of order unity that depends on the density distribution of the object.  A uniform density sphere has $$\beta=3/5$$.  We have also expressed the number of particles in the system in terms of the mean particle mass $$\mu m_{\mathrm{H}}$$.
 
 Note that the temperature is inversely proportional to the radius, so that as an object gets smaller, it will also get hotter.  Recall also that, in the absence of any source of support, the system will collapse.  The virial theorem gives that half of the gravitational energy will go into heating up the gas (as per above) and the other half is radiated away.  Since objects radiate energies at a rate given by their luminosities $$L$$, the time it takes for an object to contract substantially is set by the Kelvin-Helmholtz timescales $$\tau_{\mathrm{KH}}$$.
@@ -30,7 +31,17 @@ $$
 P = K_1 \rho^{5/3}
 $$
 
-where $$K_1=3\times 10^{6}~\mathrm{Pa}$$ for $$\rho$$ in SI units.  
+where $$K_1=3\times 10^{6}~\mathrm{Pa}$$ for $$\rho$$ in SI units.  Of note there is no temperature dependence on the equation of state.  This becomes important if the temperature of the gas becomes high enough to ignite fusion inside a degenerate gas.  Also of note, the mass-radius relationship for objects supported by degeneracy pressure has a negative index.  The pressure required to support an object of mass $$M$$ and radius $$R$$ is $$P \propto G M^2/R^4$$.  If this pressure is provided by electron degeneracy pressure, as above, where $$P\propto \rho^{5/3} \propto M^{5/3} / R^5, then
+
+$$
+\begin{eqnarray}
+G M^2/R^4 & \propto & M^{5/3} / R^5,\\
+R \propto M^{-1/3}/G.
+\end{eqnarray}
+$$
+
+This result means that higher mass objects have smaller radii.  
+
 
 ## Evolution on the Main Sequence 
 
