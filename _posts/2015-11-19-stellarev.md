@@ -20,7 +20,17 @@ where we have used a general form for the gravitational self energy and the cons
 
 Note that the temperature is inversely proportional to the radius, so that as an object gets smaller, it will also get hotter.  Recall also that, in the absence of any source of support, the system will collapse.  The virial theorem gives that half of the gravitational energy will go into heating up the gas (as per above) and the other half is radiated away.  Since objects radiate energies at a rate given by their luminosities $$L$$, the time it takes for an object to contract substantially is set by the Kelvin-Helmholtz timescales $$\tau_{\mathrm{KH}}$$.
 
+In general, as a stellar core contracts and heats up, one of two things will happen.  
 
+1. The star will reach the threshold temperatures and densities require to ignite a higher stage of nuclear fusion.  For example, the temperatures could reach the $$T=10^8~\mathrm{K}$$ temperatures needed to start the fusion of He into C under the $$3\alpha$$ process.  
+
+2.  Alternatively, the core could become supported by electron degeneracy pressure.  This source of pressure will provided the necessary support to keep the star in a hydrostatic equilibrium without nuclear fusion and the collapse will halt.  Note that the equation of state for (non-relativistic) degeneracy pressure is 
+
+$$
+P = K_1 \rho^{5/3}
+$$
+
+where $$K_1=3\times 10^{6}~\mathrm{Pa}$$ for $$\rho$$ in SI units.  
 
 ## Evolution on the Main Sequence 
 
@@ -40,7 +50,7 @@ Here we mean stars with masses $$ 0.8 M_{\odot} < M < 2 M_{\odot}$$.  We base ou
 
 These stars have radiative cores and radiative-plus-convective envelopes.  For our purposes, the _core_ means the part of the star that is undergoing nuclear fusion and the _envelope_ is the inert outer layers that are not participating in the fusion process.  The radiative nature of the stellar cores means that the material is static and a given parcel of gas remains at the same radius in the star.  Since the temperature and density profiles in a star are highest in the centre $$(r=0)$$ and decreasing with radius, this means that the nuclear energy generation rate $$(\epsilon \propto \rho T_6^4)$$ will be strongly centrally peaked and it will remain so over the life of the star.  In terms of energy generation, this means that matter at the centre of the star is will fuse its hydrogen into helium at a faster rate, depleting the hydrogen content and arriving at a depleted state first $$(X=0,Y=0.98,Z=0.02)$$.  In this gas, fusion will shut off, but the gas will be hot and surrounded by a region of the core that is still fusing hydrogen.  This gas will also be isothermal since it is not producing any fusion within it.  Instead it will be held at a constant temperature set by the energy generating region around it.  
 
-As the star continues to fuse, this inert, isothermal core will get larger and the fusing region move to progressively larger radii.  In this time, it transitions from being a core-burning star into a shell-burning fusion source.  There is a maximum mass for the isothermal helium core before it collapses under its own self-gravity.  This is called the Schönberg-Chandrasekhar limit and is about 10% of the star's mass.  At this point, the isothermal core contracts and heats up on 
+As the star continues to fuse, this inert, isothermal core will get larger and the fusing region move to progressively larger radii.  In this time, it transitions from being a core-burning star into a shell-burning fusion source.  There is a maximum mass for the isothermal helium core before it collapses under its own self-gravity.  This is called the Schönberg-Chandrasekhar limit and is about 10% of the star's mass.  At this point, the isothermal core contracts and heats up on the Kelvin-Helmholtz timescale.  
 
 
 
