@@ -85,12 +85,11 @@ These stars are undergoing $$3\alpha$$ fusion of He into C in their core.  They 
 
 ### The Asymptotic Giant Branch
 
-HB stars will evolve over another $$10^9$$ years on the main sequence and build up a C/O core that contracts and becomes supported by degeneracy pressure.  At this point, they move onto the _Asymptotic Giant Branch_.  
+HB stars will evolve over another $$10^9$$ years on the main sequence and build up a C/O core that contracts and becomes supported by degeneracy pressure.  At this point, they move onto the _Asymptotic Giant Branch_.  These stars have a convective envelope, a degenerate C/O core and two nested shells of H and He burning.  Like the RGB, these stars deposit material on the C/O core, causing it to get smaller and hotter.  If these stars reached the internal temperatures of $$T=10^9~\mathrm{ K}$$ where $${}^{12}\mathrm{C}$$ fusion could ignite, they would proceed to another phase of fusion.  However, the shell fusion in these stars gets sufficiently intense that it begins to force off the outer layers of the stars.  This process happens in pulsations: the shell source builds up thermal energy, pushes off the other layers which reduces the pressure on the shell source and then its luminosity.  The envelope of the star settles back onto the shell, building up energy again, which then pushes out.  This is the thermostatic mechanism at work, but the pulses are much larger.  These pulses throw off the outer layers of the star, which are observed as _planetary nebulae_ and are some of the most amazing pictures we have of stuff in space.  [Here](http://hubblesite.org/gallery/album/nebula/planetary/) are some cool Hubble pictures.
 
-
+After the thermal pulses on the Asymptotic Giant Branch throw off of the whole outer layer into a planetary nebula, the remnant is a hot C/O core, supported by degeneracy pressure.  We call this object a white dwarf and they show up in the lower left-hand corner of the HR diagram.
 
 ![Low Mass Stellar Structure](/images/StellarEvolution.png)
-
 
 ## Medium mass Stellar Evolution
 
