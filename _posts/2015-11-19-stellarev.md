@@ -66,14 +66,18 @@ the amount of pressure provided by a gas at density $$\rho$$ and temperature $$T
 
 Here we mean stars with masses $$ 0.8 M_{\odot} < M < 2 M_{\odot}$$.  We base our discussion of stellar evolution on these stars, and then describe the changes with mass in terms of this basic evolutionary scheme.  
 
+### The Subgiant phase
 These stars have radiative cores and radiative-plus-convective envelopes.  For our purposes, the _core_ means the part of the star that is undergoing nuclear fusion and the _envelope_ is the inert outer layers that are not participating in the fusion process.  The radiative nature of the stellar cores means that the material is static and a given parcel of gas remains at the same radius in the star.  Since the temperature and density profiles in a star are highest in the centre $$(r=0)$$ and decreasing with radius, this means that the nuclear energy generation rate $$(\epsilon \propto \rho T_6^4)$$ will be strongly centrally peaked and it will remain so over the life of the star.  In terms of energy generation, this means that matter at the centre of the star is will fuse its hydrogen into helium at a faster rate, depleting the hydrogen content and arriving at a depleted state first $$(X=0,Y=0.98,Z=0.02)$$.  In this gas, fusion will shut off, but the gas will be hot and surrounded by a region of the core that is still fusing hydrogen.  This gas will also be isothermal since it is not producing any fusion within it.  Instead it will be held at a constant temperature set by the energy generating region around it.  
 
 As the star continues to fuse, this inert, isothermal core will get larger and the fusing region move to progressively larger radii.  In this time, it transitions from being a core-burning star into a shell-burning fusion source.  Shell-burning stars obey something called the _mirror principle_, which is an observation gleaned from the models that when a shell contracts, the envelope of the star will expand and vice versa. 
 
 There is a maximum mass for the isothermal helium core before it collapses under its own self-gravity.  This is called the Schönberg-Chandrasekhar limit and is about 10% of the star's mass.  At this point, the isothermal core contracts and heats up on the Kelvin-Helmholtz timescale.  During this contraction, the core, and shell-burning source shrink, meaning that the envelope expands.  More of the mass will become convective.  The contraction is eventually halted by the onset of degeneracy pressure.  
 
+### The Red Giant Branch
 
+At this point in the evolution, the star is at the base of the red giant branch.  It consists 
 
+![Low Mass Stellar Structure](/images/StellarEvolution.png)
 
 
 ## Medium mass Stellar Evolution
