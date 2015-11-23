@@ -75,7 +75,19 @@ There is a maximum mass for the isothermal helium core before it collapses under
 
 ### The Red Giant Branch
 
-At this point in the evolution, the star is at the base of the red giant branch.  It consists 
+At this point in the evolution, the star is at the base of the red giant branch.  It consists of a degenerate He core with a shell burning source on top of it.  As the shell source continues fusing the hydrogen into helium, the He ash builds up in the degenerate core, adding mass to it.  As the mass of the core increases, its radius decreases, because of the mass-radius relationship for degenerate objects, the radius of the core gets smaller.  Following the _mirror principle_ the shell burning source (and the degenerate core) will heat up and the envelope will expand.  The red giant will increase its luminosity at roughly constant surface temperature $$(T_e \approx 3500~\mathrm{ K})$$.  Thus, it will appear to move "up" the red giant branch.
+
+This evolution occurs on a nuclear timescale and will take nearly $$10^9$$ years a $$ 1 M_{\odot}$$ star.  During this phase, the core gets smaller and hotter, approaching the threshold temperature for $$3\alpha$$ fusion, $$10^8$$ K.  All stars reach this temperature when the core mass is about $$0.4 M_{\odot}$$.  Once He fusion ignites, it provides an energy source to its environment, which heats it up.  Under normal conditions, this local heating would produce an increase in pressure, which would cause the gas to expand and reduce the fusion generation rate.  This thermostatic mechanism keeps fusion in our Sun stable.  However, in a degenerate gas, the equation of state has no sensitivity to temperature and the perfect gas component of the equation of state is much smaller than the degenerate component.  (Note that the combination of the two equations of state isn't as simple as just adding the pressures, but it will suffice for our discussion.)  This lack of a pressure sensitivity means that there is no thermostatic process that will reduce the rate of fusion generation.  Instead, the local heating will prompt the nuclear fusion under the $$3\alpha$$ process to increase much more ($$\epsilon_{3\alpha} \propto T_8^{40}$$). This increase in temperature leads to a runaway fusion process and our truism: _Nuclear burning in degenerate matter is unstable._  This is just a nice way of saying a big He thermonuclear explosion goes off in the centre of the star.  In their quiet, understated way, astronomers call this the _Helium Flash_.  The amount of energy is not enough to destroy (unbind) the star.  Note that, the helium flash  could do so for lower mass stars, but no such stars have ever evolved off the main sequence.  The flash provides enough thermal energy input to raise the temperature throughout the core and to settle into a perfect gas equation of state (and pressure support) again.  The star then stabilizes on the Helium burning sequence.
+
+### The Helium Burning Sequence
+
+These stars are undergoing $$3\alpha$$ fusion of He into C in their core.  They have a H burning shell source (using the CNO) cycle and radiative envelopes.  Since all the stars evolve from the ignition of a $$0.4 M_{\odot}$$ core, all these stars have a roughly constant luminosity of $$L\approx 50 L_{\odot}$$.  Their surface temperatures can vary depending on whether there is mass lost during the movement onto the HB or the metallicity of the star.  This means that, in a Hertzsprung-Russell diagram, they will all lie on a horizontal line, leading to the other name for such stars: the Horizontal Branch.  Most solar metallicity stars end up on the red side of the branch where they are called the _Red Clump_.  
+
+### The Asymptotic Giant Branch
+
+HB stars will evolve over another $$10^9$$ years on the main sequence and build up a C/O core that contracts and becomes supported by degeneracy pressure.  At this point, they move onto the _Asymptotic Giant Branch_.  
+
+
 
 ![Low Mass Stellar Structure](/images/StellarEvolution.png)
 
