@@ -98,13 +98,18 @@ The diagram above shows the cutaways of the evolution of a low mass star at diff
 
 ![Evolutionary Tracks](/images/EvTracks.png)
 
-The above discussion focuses on the behaviour of the interior of the stars with some attention to the envelope.  However, since we can only see the properties of the stars from the outside, the observable parts of the stars that matter are reflected in the envelope.  To that end, the evolutionary tracks of stars are generally described in how their envelopes are responding to their interior / core changes.  This leads us to talking about how stars "move" in the HR diagram, but this notion of moving really just means the quantities plotted in the HR diagram (the _surface temperature_ and luminosity) are changing.  The figure above shows evolutionary tracks for a stars with mass of $$1\ M_{\odot}, 3\ M_{\odot}, 8\ M_{\odot}$$.  The tracks for different masses don't cross significantly and so we can translate a position in the HR diagram into an understanding of the interiors and the evolutionary state of stars.   Note how the changing interior structure of the star is indeed reflected in the envelope.  
-
-
-
-
-
+The above discussion focuses on the behaviour of the interior of the stars with some attention to the envelope.  However, since we can only see the properties of the stars from the outside, the observable parts of the stars that matter are reflected in the envelope.  To that end, the evolutionary tracks of stars are generally described in how their envelopes are responding to their interior / core changes.  This leads us to talking about how stars "move" in the HR diagram, but this notion of moving really just means the quantities plotted in the HR diagram (the _surface_ temperature and luminosity) are changing.  The figure above shows evolutionary tracks for a stars with mass of $$1\ M_{\odot}, 3\ M_{\odot}, 8\ M_{\odot}$$.  The tracks for different masses don't cross significantly and so we can translate a position in the HR diagram into an understanding of the interiors and the evolutionary state of stars.   Note how the changing interior structure of the star is indeed reflected in the envelope.  
 
 ## Medium mass Stellar Evolution
 
-For stars with masses $$ 2 M_{\odot} < M < 8 M_{\odot}$$, their evolution is similar to low mass stars, with the exception that there isn't the formation of a degenerate electron core and a proper red giant phase.  
+For stars with masses $$ 2 M_{\odot} < M < 8 M_{\odot}$$, their evolution is similar to low mass stars, with the exception that there isn't the build up of an isothermal core in the subgiant phase.  This is due mostly to the dominance of the CNO cycle during main sequence burning.  Stars with CNO cycle burning tend to have convective cores because of their centrally peaked energy generation rate.  This means that, instead of building up an inert region in the centre of the star, the fusion at the core will be fed by convection of material from higher up in the star.  This means that the fusion will deplete the material in the core all at once rather than building up an isothermal core steadily.  These stars will undergo core contraction and move toward and up the red giant branch, but their cores will not become strongly degenerate as the low mass stars do.  They thus do not undergo a helium flash and instead have a smooth ignition of helium on to the helium burning sequence on a Kelvin-Helmholtz timescale Such stars are briefly on the Red Giant Branch based on their envelope properties but they do not have the same structure as for a low mass star below.
+
+From this point on, their evolution follows that of a low mass star: helium burning sequence followed by thermal pulsations and the formation of a C/O white dwarf.
+
+## High Mass Stellar Evolution
+
+High mass stars are notable because they do not experience a degenerate core during their evolution.  Every stage of nuclear burning ends, contracts, heats up and ignites the next heaviest elements of nuclear burning.  Of note, such stars, after Helium fusion, will be able to ignite
+
+$${}^{12}\mathrm{C} + {}^{12}\mathrm{C} \to {}^{24}\mathrm{Mg}$$
+
+and other heavy element fusion processes that occur above $$T=10^9\ \mathrm{K}$$. These fusion stages all occur at roughly constant luminosity, but the stars undergo significant internal restructuring.  For example, when their core contracts and their envelopes expand, their surface temperatures must get smaller meaning they move to the right in the HR diagram.  Similarly, when the core ignites and expands again, the envelope will shrink and the star will move to the left.  This behaviour is visible in the $$8\ M_{\odot}$$ star track.
