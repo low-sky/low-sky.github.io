@@ -89,7 +89,19 @@ HB stars will evolve over another $$10^9$$ years on the main sequence and build 
 
 After the thermal pulses on the Asymptotic Giant Branch throw off of the whole outer layer into a planetary nebula, the remnant is a hot C/O core, supported by degeneracy pressure.  We call this object a white dwarf and they show up in the lower left-hand corner of the HR diagram.
 
+### Star Structure
 ![Low Mass Stellar Structure](/images/StellarEvolution.png)
+
+The diagram above shows the cutaways of the evolution of a low mass star at different stages of its evolution.  It's worth noting that the figures are very much _not to scale_, and the transitions between the stages are gradual.  The diagrams are just to remind you of relative ordering of the components of the stars.
+
+### Evolution in the HR Diagram
+
+![Evolutionary Tracks](/images/EvTracks.png)
+
+The above discussion focuses on the behaviour of the interior of the stars with some attention to the envelope.  However, since we can only see the properties of the stars from the outside, the observable parts of the stars that matter are reflected in the envelope.  To that end, the evolutionary tracks of stars are generally described in how their envelopes are responding to their interior / core changes.  This leads us to talking about how stars "move" in the HR diagram, but this notion of moving really just means the quantities plotted in the HR diagram (the _surface temperature_ and luminosity) are changing.  The figure above shows evolutionary tracks for a stars with mass of $$1\ M_{\odot}, 3\ M_{\odot}, 8\ M_{\odot}$$.  
+
+
+
 
 ## Medium mass Stellar Evolution
 
