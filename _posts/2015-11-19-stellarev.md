@@ -64,7 +64,7 @@ the amount of pressure provided by a gas at density $$\rho$$ and temperature $$T
 
 ## Low mass Stellar Evolution
 
-Here we mean stars with masses $$ 0.8 M_{\odot} < M < 2 M_{\odot}$$.  We base our discussion of stellar evolution on these stars, and then describe the changes with mass in terms of this basic evolutionary scheme.  
+Here we mean stars with masses $$ 0.8 M_{\odot} < M < 2 M_{\odot}$$.  We base our discussion of stellar evolution on these stars, and then describe the changes with mass in terms of this basic evolutionary scheme.  See below for some figures that show how these stars are moving the HR diagram.  
 
 ### The Subgiant phase
 These stars have radiative cores and radiative-plus-convective envelopes.  For our purposes, the _core_ means the part of the star that is undergoing nuclear fusion and the _envelope_ is the inert outer layers that are not participating in the fusion process.  The radiative nature of the stellar cores means that the material is static and a given parcel of gas remains at the same radius in the star.  Since the temperature and density profiles in a star are highest in the centre $$(r=0)$$ and decreasing with radius, this means that the nuclear energy generation rate $$(\epsilon \propto \rho T_6^4)$$ will be strongly centrally peaked and it will remain so over the life of the star.  In terms of energy generation, this means that matter at the centre of the star is will fuse its hydrogen into helium at a faster rate, depleting the hydrogen content and arriving at a depleted state first $$(X=0,Y=0.98,Z=0.02)$$.  In this gas, fusion will shut off, but the gas will be hot and surrounded by a region of the core that is still fusing hydrogen.  This gas will also be isothermal since it is not producing any fusion within it.  Instead it will be held at a constant temperature set by the energy generating region around it.  
@@ -99,6 +99,8 @@ The diagram above shows the cutaways of the evolution of a low mass star at diff
 ![Evolutionary Tracks](/images/EvTracks.png)
 
 The above discussion focuses on the behaviour of the interior of the stars with some attention to the envelope.  However, since we can only see the properties of the stars from the outside, the observable parts of the stars that matter are reflected in the envelope.  To that end, the evolutionary tracks of stars are generally described in how their envelopes are responding to their interior / core changes.  This leads us to talking about how stars "move" in the HR diagram, but this notion of moving really just means the quantities plotted in the HR diagram (the _surface temperature_ and luminosity) are changing.  The figure above shows evolutionary tracks for a stars with mass of $$1\ M_{\odot}, 3\ M_{\odot}, 8\ M_{\odot}$$.  
+
+
 
 
 
