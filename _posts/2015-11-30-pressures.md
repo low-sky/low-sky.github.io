@@ -102,11 +102,11 @@ $$
 
 ## Non-relativistic Degeneracy Pressure 
 
-In this case, the distribution function for momentum is actually much easier to understand.  All states are occupied up to some maximum momentum $$p_{max}$$ and then the states are empty above that.  The number of states between $$p$$ and $$p+dp$$ is just the momentum volume of a thin spherical shell $$4\pi p^2 \, dp$ so 
+In this case, the distribution function for momentum is actually much easier to understand.  All states are occupied up to some maximum momentum $$p_{max}$$ and then the states are empty above that.  The number of states between $$p$$ and $$p+dp$$ is just the momentum volume of a thin spherical shell $$4\pi p^2 \, dp$$ so 
 
 $$
-N_p(p) = \left{\begin{array}[rl]
-N 4 \pi p^2 dp & ; p \le p_{max} \\
+N_p(p) = \left\{\begin{array}[rl]
+\frac{2}{h^3} 4 \pi p^2 dp & ; p \le p_{max} \\
 0 & ; p > p_{max}
 \end{array}\right.
 $$
