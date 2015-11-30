@@ -116,13 +116,13 @@ Above the $$2/h^3$$ term represents the number of particles per unit phase space
 $$
 \begin{eqnarray*}
 P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
-&=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} \frac{p^2}{m} \frac{8\pi}{h^3} p^2 \dp,\\
+&=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} \frac{p^2}{m} \frac{8\pi}{h^3} p^2 \, dp,\\
 &=& \frac{8\pi}{3 m h^3} \int_0^{p_{\mathrm{max}}} p^4\, dp,\\
 & = & \frac{8\pi}{15 m h^3} p_{\mathrm{max}}^5
 \end{eqnarray*}
 $$
 
-Returning to the very top, we can substitute in our value for $$p_{\mathrm{max}}$, namely that 
+Returning to the very top, we can substitute in our value for $$p_{\mathrm{max}}$$, namely that 
 
 $$
 p_{\mathrm{max}}  =  \left[\frac{3 h^3}{8\pi} N_e \right]^{1/3}
