@@ -141,7 +141,7 @@ $$
 The last line of the derivation gives the standard equation of state.  When the number density is expressed in terms of mass density as is typical with $$\mu_e = 2$$ as expected for $$X=0$$ gas, we get 
 
 $$
-P = 3.124\times 10^6~\mathrm{Pa}\left(\frac{\rho}{\mathrm{kg~m^{-3}}\right)^{5/3}.
+P = 3.124\times 10^6~\mathrm{Pa}\left(\frac{\rho}{\mathrm{kg~m^{-3}}}\right)^{5/3}.
 $$
 
 ## Ultrarelativsitic degeneracy pressure
@@ -157,11 +157,11 @@ P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
 & = & \frac{2\pi c}{3 h^3} \left[\frac{3 h^3}{8\pi} N_e \right]^{4/3},
 & = & \left(\frac{3}{8\pi}\right)^{1/3} \frac{hc}{4} N_e^{4/3}.
 \end{eqnarray*}
-
+$$
 Making the same mass assumptions as before, we get
 
 
 $$
-P = 4.9\times 10^9~\mathrm{Pa}\left(\frac{\rho}{\mathrm{kg~m^{-3}}\right)^{4/3}.
+P = 4.9\times 10^9~\mathrm{Pa}\left(\frac{\rho}{\mathrm{kg~m^{-3}}}\right)^{4/3}.
 $$
 
