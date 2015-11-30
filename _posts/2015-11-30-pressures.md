@@ -102,12 +102,40 @@ $$
 
 ## Non-relativistic Degeneracy Pressure 
 
-In this case, the distribution function for momentum is actually much easier to understand.  All states are occupied up to some maximum momentum $$p_{max}$$ and then the states are empty above that.  The number of states between $$p$$ and $$p+dp$$ is just the momentum volume of a thin spherical shell $$4\pi p^2 \, dp$$ so 
+In this case, the distribution function for momentum is actually much easier to understand.  All states are occupied up to some maximum momentum $$p_{\mathrm{max}}$$ and then the states are empty above that.  The number of states between $$p$$ and $$p+dp$$ is just the momentum volume of a thin spherical shell $$4\pi p^2 \, dp$$ so 
 
 $$
 N_p(p) = \left\{\begin{array}[rl]
-\frac{2}{h^3} 4 \pi p^2 dp & ; p \le p_{max} \\
-0 & ; p > p_{max}
+2 h^{-3} 4 \cdot \pi p^2 dp & ; p \le p_{\mathrm{max}} \\
+0 & ; p > p_{\mathrm{max}}
 \end{array}\right.
 $$
+
+Above the $$2/h^3$$ term represents the number of particles per unit phase space.  This makes for a simpler pressure integral than for the perfect gas:
+
+$$
+\begin{eqnarray*}
+P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
+&=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} \frac{p^2}{m} \frac{8\pi}{h^3} p^2 \dp,\\
+&=& \frac{8\pi}{3 m h^3} \int_0^{p_{\mathrm{max}}} p^4\, dp,\\
+& = & \frac{8\pi}{15 m h^3} p_{\mathrm{max}}^5
+\end{eqnarray*}
+$$
+
+Returning to the very top, we can substitute in our value for $$p_{\mathrm{max}}$, namely that 
+
+$$
+p_{\mathrm{max}}  =  \left[\frac{3 h^3}{8\pi} N_e \right]^{1/3}
+$$ 
+
+so 
+
+$$
+\begin{eqnarray*}
+P & = & \frac{8\pi}{15 m h^3}  \left[\frac{3 h^3}{8\pi} N_e \right]^{5/3}\\
+&=& \frac{8\pi}{15} \left(\frac{3}{8\pi}\right)^{5/3} \frac{h^2}{m} N_e^{5/3} \\
+&= & \left(\frac{3}{8\pi}\right)^{2/3} \frac{h^2}{5 m} N_e^{5/3}.
+\end{eqnarray*}
+$$
+
 
