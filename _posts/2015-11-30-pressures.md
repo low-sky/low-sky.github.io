@@ -138,4 +138,23 @@ P & = & \frac{8\pi}{15 m h^3}  \left[\frac{3 h^3}{8\pi} N_e \right]^{5/3}\\
 \end{eqnarray*}
 $$
 
+The last line of the derivation gives the standard equation of state.  When the number density is expressed in terms of mass density as is typical with $$\mu_e = 2$$ as expected for $$X=0$$ gas, we get 
+
+$$
+P = 3.124\times 10^6~\mathrm{Pa}\left(\frac{\rho}{\mathrm{kg~m^{-3}}\right)^{5/3}.
+$$
+
+## Ultrarelativsitic degeneracy pressure
+
+As the speeds of the particles approach the speed of light, their momentum gets arbitrarily large but the speed is limited to $$v\lesssim c$$.  If we take $$v=c$$ in the pressure integral, we get 
+
+$$
+\begin{eqnarray*}
+P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
+&=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} p c  \frac{8\pi}{h^3} p^2 \dp,\\
+&=& \frac{8\pi c}{3 h^3} \int_0^{p_{\mathrm{max}}}  p^3 \dp,\\
+&=&  \frac{2\pi c}{3 h^3} p_{\mathrm{max}}^4,
+& = & \frac{2\pi c}{3 h^3} \left[\frac{3 h^3}{8\pi} N_e \right]^{4/3},
+& = & \left(\frac{3}{8\pi}\right)^{1/3} \frac{hc}{4} N_e^{4/3}.
+\end{eqnarray*}
 
