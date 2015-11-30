@@ -151,10 +151,10 @@ As the speeds of the particles approach the speed of light, their momentum gets 
 $$
 \begin{eqnarray*}
 P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
-&=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} p c  \frac{8\pi}{h^3} p^2 \dp,\\
-&=& \frac{8\pi c}{3 h^3} \int_0^{p_{\mathrm{max}}}  p^3 \dp,\\
-&=&  \frac{2\pi c}{3 h^3} p_{\mathrm{max}}^4,
-& = & \frac{2\pi c}{3 h^3} \left[\frac{3 h^3}{8\pi} N_e \right]^{4/3},
+&=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} p c  \frac{8\pi}{h^3} p^2 \, dp,\\
+&=& \frac{8\pi c}{3 h^3} \int_0^{p_{\mathrm{max}}}  p^3 \, dp,\\
+&=&  \frac{2\pi c}{3 h^3} p_{\mathrm{max}}^4,\\
+& = & \frac{2\pi c}{3 h^3} \left[\frac{3 h^3}{8\pi} N_e \right]^{4/3},\\
 & = & \left(\frac{3}{8\pi}\right)^{1/3} \frac{hc}{4} N_e^{4/3}.
 \end{eqnarray*}
 $$
