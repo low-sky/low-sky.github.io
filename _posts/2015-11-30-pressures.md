@@ -158,3 +158,10 @@ P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
 & = & \left(\frac{3}{8\pi}\right)^{1/3} \frac{hc}{4} N_e^{4/3}.
 \end{eqnarray*}
 
+Making the same mass assumptions as before, we get
+
+
+$$
+P = 4.9\times 10^9~\mathrm{Pa}\left(\frac{\rho}{\mathrm{kg~m^{-3}}\right)^{4/3}.
+$$
+
