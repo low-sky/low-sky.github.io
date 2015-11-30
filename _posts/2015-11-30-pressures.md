@@ -38,13 +38,14 @@ P & = & \frac{F}{A} \\
 & = & \frac{2 p v \cos^2 \theta}{V},
 \end{eqnarray*}
 $$
+
 where $$V$$ is a volume with a single particle of the beam in it.  We can then identify $$1/V$$ as the volume density $$N$$ so $$P = 2 N p_v \cos^2 \theta$$.  
 
 Now, gases of particles aren't perfect beams with a set of particles all having the same momentum.  Particles also strike the barrier from all different directions.  To account for these two effects, we need to extend this simple idea a bit.  Dealing with the direction component first, we need to consider the average value that $$\cos^2 \theta$$ term takes when looking over all possible angles that can hit the wall.  The formal version is to consider spherical-polar coordinates, and average over the portion of the sphere that is pointing toward the barrier, i.e., for $$0 \le \theta < \pi/2$$.  Then, this average [gives](http://www.wolframalpha.com/input/?i=Integrate%28cos%28x%29^2+sin%28x%29%2Cx%3D0..pi%2F2%29%2FIntegrate%28sin%28x%29%2Cx%3D0..pi%2F2%29)
 
 $$
 \begin{eqnarray*}
-\langle \cos^2 \theta \rangle & = & \frac{\int_{0}^{2\pi} d \phi \int_0^{\pi/2} \cos^2 \theta \sin theta d\theta }{\int_{0}^{2\pi} d \phi \int_0^{\pi/2}  \sin theta d\theta}\\
+\langle \cos^2 \theta \rangle & = & \frac{\int_{0}^{2\pi} d \phi \int_0^{\pi/2} \cos^2 \theta \sin \theta d\theta }{\int_{0}^{2\pi} d \phi \int_0^{\pi/2}  \sin \theta d\theta}\\
 & = & \frac{1}{3}.
 \end{eqnarray*}
 $$
