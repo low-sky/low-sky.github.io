@@ -38,7 +38,7 @@ $$
 P = K_1 \rho^{5/3}
 $$
 
-where $$K_1=3\times 10^{6}~\mathrm{Pa}$$ for $$\rho$$ in SI units.  Of note there is no temperature dependence on the equation of state.  This becomes important if the temperature of the gas becomes high enough to ignite fusion inside a degenerate gas.  Also of note, the mass-radius relationship for objects supported by degeneracy pressure has a negative index.  The pressure required to support an object of mass $$M$$ and radius $$R$$ is $$P \propto G M^2/R^4$$.  If this pressure is provided by electron degeneracy pressure, as above, where $$P\propto \rho^{5/3} \propto M^{5/3} / R^5, then
+where $$K_1=3\times 10^{6}~\mathrm{Pa}$$ for $$\rho$$ in SI units.  Of note there is no temperature dependence on the equation of state.  This becomes important if the temperature of the gas becomes high enough to ignite fusion inside a degenerate gas.  Also of note, the mass-radius relationship for objects supported by degeneracy pressure has a negative index.  The pressure required to support an object of mass $$M$$ and radius $$R$$ is $$P \propto G M^2/R^4$$.  If this pressure is provided by electron degeneracy pressure, as above, where $$P\propto \rho^{5/3} \propto M^{5/3} / R^5$$, then
 
 $$
 \begin{eqnarray}
