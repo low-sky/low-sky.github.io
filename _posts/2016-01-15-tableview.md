@@ -14,3 +14,4 @@ TOPCAT has [extensive documentation](http://www.star.bris.ac.uk/~mbt/topcat/sun2
 where `table_name.fits` is the filename of the table you are exploring.  This will pop up main window which looks like this:
 
 ![Spectral Cubes](/images/LoadWindow.png)
+
