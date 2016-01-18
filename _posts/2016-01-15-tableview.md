@@ -72,4 +72,8 @@ In the language of CPROPS you will want to use
 
 Note that the `EXTRAP` tag means that the value has been extrapolated to the value that is expected in the case of infinite signal to noise.  The `DECONV` means that the value has been corrected for the response of the telescope (i.e., the so-called beam deconvolution for sizes and in the case of the line width for the spectrometer response).
 
+Your code should overplot the lines for the Milky Way relationships for these trends as described in the Solomon et al. (1987) article.  Go ahead and commit a single program to make these three plots into github.  If you're having issues, go ahead and commit and send questions!
+
+
+
 
