@@ -31,15 +31,45 @@ Finally, you can check out the table itself if you return to the main TOPCAT win
 
 ## astropy.tables and matplotlib
 
-Plotting using TOPCAT is great for exploring data, but it isn't good for making high quality figures.  Nor does TOPCAT have a great deal of mathematical functionality.  Thus, we turn to python to actually make figures and analyze data.  Thus, TOPCAT is good for exploring and python is good for finalizing your results.  We can also load the table into python which provides direct access to the data.  To make the same plot as above, we can use the `astropy` package and its `tables` functionality.  To do this, we can run in python:
+Plotting using TOPCAT is great for exploring data, but it isn't good for making high quality figures.  Nor does TOPCAT have a great deal of mathematical functionality.  Thus, we turn to python to actually make figures and analyze data.  Thus, TOPCAT is good for exploring and python is good for finalizing your results.  We can also load the table into python which provides direct access to the data.  To make the same plot as above, we can use the `astropy` package and its `table` functionality.  To do this, we can run in python:
 
 	# Import some libraries
-	from astropy.tables import Table
+	from astropy.table import Table
 	import matplotlib.pyplot as plt
 	
 	# Next load the file.
 	mytable = Table.read('table_name.fits')
-	
 
+This loads the FITS binary table into a astropy `Table` object, which is documented very well right [here](http://docs.astropy.org/en/stable/table/).  Now, we can make the same plot as before using matplotlib.
+
+	figure = plt.figure(figsize=(4.5,4)) #figure size in inches
+	plt.loglog(mytable['MASS_EXTRAP'],mytable['VIRMASS_EXTRAP_DECONV'],
+		marker='s',linestyle='None')
+	# Note that matplotlib understands LaTeX math in the code below
+	plt.xlabel(r'$M_{\mathrm{lum}}\ (M_{\odot})$') 
+	plt.ylabel(r'$M_{\mathrm{vir}}\ (M_{\odot})$')
+	plt.tight_layout() 	
+	plt.savefig('MlumMvir_matplotlib.png')
+
+This leads to the gorgeous figure that is almost ready for the journal.
+
+![Massplots](/images/MlumMvir_matplotlib.png)
+
+## Homework
+
+Use TOPCAT and matplotlib to make the "classic" plots of GMC properties, all on log-log scales.  
+
+1. Virial mass vs. luminous mass
+2. Radius vs. line width (velocity dispersion)
+3. Luminous mass vs. radius
+
+In the language of CPROPS you will want to use
+
+*  Virial Mass = `VIRMASS_EXTRAP_DECONV` in solar masses
+*  Luminous mass = `MASS_EXTRAP` in solar masses
+*  Radius = `RADRMS_EXTRAP_DECONV` in pc
+*  Line width = `VRMS_EXTRAP_DECONV` in km/s
+
+Note that the `EXTRAP` tag means that the value has been extrapolated to the value that is expected in the case of infinite signal to noise.  The `DECONV` means that the value has been corrected for the response of the telescope (i.e., the so-called beam deconvolution for sizes and in the case of the line width for the spectrometer response).
 
 
