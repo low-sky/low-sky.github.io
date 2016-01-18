@@ -17,15 +17,15 @@ where `table_name.fits` is the filename of the table you are exploring.  This wi
 
 You can mouse over the different buttons in the top row to get some help text about their functions.  The main thing you'll want to do is to make bivariate plots, which is the button with white square.  This brings up a plot window for the table you have selected.  You can then select from the bottom-right panel all the different keys (i.e., columns) in the table to plot them against each other.  Let's start by making a classic GMC properties plot: the luminous mass vs the virial mass of the cloud.  These are all calculated using the methods described in the [CPROPS paper](http://adsabs.harvard.edu/abs/2006PASP..118..590R).  The tag name for the luminous mass is just `MASS_EXTRAP` and the virial mass is called `VIRMASS_EXTRAP_DECONV`, both of which have units in solar masses.  Go ahead and make this plot by changing the axes accordingly.  The graph should look something like this:
 
-![Massplots](/image/MlumMvir.png)
+![Massplots](/images/MlumMvir.png)
 
 This isn't very illuminating since all the points are clustered down in the bottom of the plot.  Go ahead and click the axes tab in the bottom left and click `X log` and `Y log` to make this into a log-log plot:
 
-![Massplots](/image/logMlumMvir.png)
+![Massplots](/images/logMlumMvir.png)
 
 Behold a correlation (with some offset, perhaps something is wrong!). This is pretty cool, but you can also make the plots with respect to other properties.  Let's colour-code the points by cloud radius.  Do this by clicking on the table name in the lower-left and returning to the screen where you select variables.  Then, click on the `Form` tab.  If you scroll down, you can make the points bigger and change their symbols.  You can also change the `Mode` to include `Aux` meaning use the colour as an auxiliary variable.  Then, beneath it, select `RADRMS_EXTRAP_DECONV` as the radius and you should end up with a plot like this.
 
-![ColourCodes](/image/colourcoding.png)
+![ColourCodes](/images/colourcoding.png)
 
 Finally, you can check out the table itself if you return to the main TOPCAT window and click on the button that looks like a spreadsheet (it says "Display Table Cell Data" when you mouseover).  This brings up the full table and you can scroll through.  However, everything in TOPCAT is linked.  You can click on a single point in the plot and it will highlight the row in the table and vice versa.  This allows you to identify problems in the data.
 
@@ -36,6 +36,9 @@ Plotting using TOPCAT is great for exploring data, but it isn't good for making 
 	# Import some libraries
 	from astropy.tables import Table
 	import matplotlib.pyplot as plt
+	
+	# Next load the file.
+	mytable = Table.read('table_name.fits')
 	
 
 
