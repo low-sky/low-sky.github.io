@@ -23,5 +23,15 @@ This isn't very illuminating since all the points are clustered down in the bott
 
 ![Massplots](/image/logMlumMvir.png)
 
+Behold a correlation (with some offset, perhaps something is wrong!). This is pretty cool, but you can also make the plots with respect to other properties.  Let's colour-code the points by cloud radius.  Do this by clicking on the table name in the lower-left and returning to the screen where you select variables.  Then, click on the `Form` tab.  If you scroll down, you can make the points bigger and change their symbols.  You can also change the `Mode` to include `Aux` meaning use the colour as an auxiliary variable.  Then, beneath it, select `RADRMS_EXTRAP_DECONV` as the radius and you should end up with a plot like this.
+
+![ColourCodes](/image/colourcoding.png)
+
+Finally, you can check out the table itself if you return to the main TOPCAT window and click on the button that looks like a spreadsheet (it says "Display Table Cell Data" when you mouseover).  This brings up the full table and you can scroll through.  However, everything in TOPCAT is linked.  You can click on a single point in the plot and it will highlight the row in the table and vice versa.  This allows you to identify problems in the data.
+
+## astropy.tables and matplotlib
+
+Plotting using TOPCAT is great for exploring data, but it isn't good for making high quality figures.  Nor does TOPCAT have a great deal of mathematical functionality.  Thus, we turn to python to actually make figures and analyze data.  Thus, TOPCAT is good for exploring and python is good for finalizing your results.  
+
 
 
