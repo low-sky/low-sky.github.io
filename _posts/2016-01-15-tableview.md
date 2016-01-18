@@ -31,7 +31,12 @@ Finally, you can check out the table itself if you return to the main TOPCAT win
 
 ## astropy.tables and matplotlib
 
-Plotting using TOPCAT is great for exploring data, but it isn't good for making high quality figures.  Nor does TOPCAT have a great deal of mathematical functionality.  Thus, we turn to python to actually make figures and analyze data.  Thus, TOPCAT is good for exploring and python is good for finalizing your results.  
+Plotting using TOPCAT is great for exploring data, but it isn't good for making high quality figures.  Nor does TOPCAT have a great deal of mathematical functionality.  Thus, we turn to python to actually make figures and analyze data.  Thus, TOPCAT is good for exploring and python is good for finalizing your results.  We can also load the table into python which provides direct access to the data.  To make the same plot as above, we can use the `astropy` package and its `tables` functionality.  To do this, we can run in python:
+
+	# Import some libraries
+	from astropy.tables import Table
+	import matplotlib.pyplot as plt
+	
 
 
 
