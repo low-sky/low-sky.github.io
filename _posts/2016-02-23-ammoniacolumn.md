@@ -26,11 +26,11 @@ I think the right way to approach this is to throw back all the way to Rybicki a
 
 Going all the way to the blast from the past, we have the opacity coefficient as defined by radiative properties and statistical mechanical considerations as
 
-$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} n_{l} A_{ul} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right] \phi(\nu),$$
+$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} n_{l} A_{ul} \left[1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)\right] \phi(\nu),$$
 
 where $$\phi(\nu)$$ is the line profile function such that $$\int \phi(\nu)d\nu=1$$.  Integrating over line of sight and frequency gives the total column density of the _lower_ (symmetric) state of the (1,1) line:
 
-$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{l} A_{ul} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]$$
+$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{l} A_{ul} \left[1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)\right]$$
 
 Because the excitation temperature defines the ratio of the lower to the upper state, we can correct $$N_l$$ to $$N_{(1,1)}$$.
 
@@ -43,7 +43,7 @@ $$N_l=\frac{N_{(1,1)}}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}
 
 and 
 
-$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{\left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}$$
+$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{\left[1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)\right]}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}$$
 
 Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature but this isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
