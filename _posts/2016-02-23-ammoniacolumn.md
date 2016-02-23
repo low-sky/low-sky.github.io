@@ -22,12 +22,26 @@ I think the right way to approach this is to throw back all the way to Rybicki a
 
 *  $$T_K$$ is the kinetic temperature of the system, which is what we really care about.
 *  $$T_R$$ is the rotation temperature which is the excitation temperature / what you plug into Boltzmann to get the level population between the (1,1) and (2,2) states.
-*  $$T_{\mathrm{ex}}$$ is the radiative excitation temperature of the lines in question, i.e. between the symmetric ($$\ell$$) and antisymmetric ($$u$$) state of the line or the upper/lower levels of the individual $$(J,K)$$ states.  We will usually be referring to the (1,1) line in this case.
+*  $$T_{\mathrm{ex}}$$ is the radiative excitation temperature of the lines in question, i.e. between the symmetric ($$l$$) and antisymmetric ($$u$$) state of the line or the upper/lower levels of the individual $$(J,K)$$ states.  We will usually be referring to the (1,1) line in this case.
 
 Going all the way to the blast from the past, we have the opacity coefficient as defined by radiative properties and statistical mechanical considerations as
 
-$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} n_{\ell} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right] \phi(\nu),$$
+$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} n_{l} A_{ul} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right] \phi(\nu),$$
 
-where $$\phi(\nu)$$ is the line profile function such that $$\int \phi(\nu)d\nu=1$$.  Integrating over line of sight and frequency gives the total column density of the  lower state of the (1,1) line:
+where $$\phi(\nu)$$ is the line profile function such that $$\int \phi(\nu)d\nu=1$$.  Integrating over line of sight and frequency gives the total column density of the _lower_ (symmetric) state of the (1,1) line:
 
-$$ \tau = \int \kappa_\nu ds d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} N_{\ell} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]$$
+$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{l} A_{ul} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]$$
+
+Because the excitation temperature defines the ratio of the lower to the upper state, we can correct $$N_l$$ to $$N_{(1,1)}$$.
+
+
+$$ \frac{N_{u}}{N_l} = \exp \frac{g_u}{g_l} \left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)$$
+
+so 
+
+$$N_l = \frac{N_{(1,1)}}{1+\exp \frac{g_u}{g_l} \left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}$$
+
+and 
+
+$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{\left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]}{{1+\exp \frac{g_u}{g_l} \left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}}$$
+
