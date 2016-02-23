@@ -72,10 +72,13 @@ and the fiducial dipole moment is $$\mu = 1.468\times 10^{-18}\mathrm{~esu~cm}$$
 
 $$ |\mu_{ul}|^2 = \mu^2 \frac{J^2}{J(J+1)}.$$
 
-To get to the optical depths of the other lines, we usually scale from the (1,1) line.  For example:
+We can use the exact same formulation for the $$(J,J)$$ line _mutatis mutandis_ and get a column density for each, but the trick is to relate the entire para-NH$$_3$$ column to the column in an individual state.  To get to the optical depths of the other lines, we usually scale from the (1,1) line.  For example:
 
 $$
-\frac{\tau_{(2,2)}}{\tau_{(1,1)}} = \frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{A_{(2,2)}}{A_{(1,1)}} \frac{f_{22}}{f_{11}},
+\begin{eqnarray}
+\frac{\tau_{(2,2)}}{\tau_{(1,1)}} &=&\frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{A_{(2,2)}}{A_{(1,1)}} \frac{f_{22}}{f_{11}}\\,
+& = & \frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{2^2}{2\cdot 3} \frac{2}{1}  \frac{f_{22}}{f_{11}}.
+\end{eqnarray}
 $$
 
 where, for compactness, I use
@@ -86,8 +89,14 @@ $$
 
 Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature and that the frequencies are approximately equal (and much less than $$T_{ex}$$).  In this regime, we set $$f_{22}/f_{11}=1$$.  The former assumption is isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ and $$N(\mathrm{p-NH}_3)=10^{14}~\mathrm{cm^{-2}}$$  gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
-We can use the exact same formulation for the $$(J,J)$$ line _mutatis mutandis_ and get a column density for each, but the trick is to relate the entire para-NH$$_3$$ column to the column in an individual state.  Currently, we engage in a deceit.  We assume a two-level system so that we can define $$T_R$$ such that
+Currently, we engage in a deceit.  We assume a two-level system so that we can define $$T_R$$ such that
 
 $$ N_{(2,2)} = N_{(1,1)} \frac{5}{3} \exp\left(-\frac{\Delta E}{kT_R}\right)$$
 
-where the 5/3 is the ratio of the statistical weights of the states.  
+where the 5/3 is the ratio of the rotational statistical weights of the states ($$g_J = 2J+1$$). From here we have that $$T_R$$ can be related to the kinetic temperature using the work of Swift (the man, the myth, the legend) et al. (2005):
+
+$$
+T_R = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7}{T_K}\right)\right]\right}.
+$$
+
+  
