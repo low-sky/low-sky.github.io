@@ -3,9 +3,10 @@ layout: post
 title: Ammonia column densities
 ---
 
-In the continuing quest for ammonia column densities, we return to the question of how to turn observables into the total optical depth for a line.
+In the continuing quest for ammonia column densities, we return to the question of how to turn observables into the total optical depth for a line.  We have several options in front of us, all of which are nominally equivalent.
 
 Friesen et al. (2009):
+
 $$N(1,1) = \frac{8\pi\nu^2}{c^2} \frac{g_1}{g_2} \frac{1}{A_{1,1}} \frac{1+\exp\left(-h\nu_0/k_B T_{ex}\right)}{1-\exp\left(-h \nu_0/k_B T_{ex}\right)} \int \tau(\nu) d\nu$$
 
 Rosolowsky et al (2008):
@@ -16,3 +17,10 @@ Mangum and Shirley (2015):
 
 $$N_{tot} = \frac{3 h}{8 \pi \mu^2 R_i} \frac{J_u(J_u+1)}{K^2}
 \frac{Q_{rot}}{g_J g_K g_I} \frac{\exp{E_u/k_B T_{ex}}}{\exp{h \nu/k_B T_{ex}} - 1} \left[\frac{\int T_R dv}{f\left(J_\nu(T_ex)-J_\nu{T_B}\right) }\right]$$
+
+I think the right way to approach this is to throw back all the way to Rybicki and Lightman style to model the formation of the line.  Note that there really are several temperatures in play:
+
+*  $$T_K$$ is the kinetic temperature of the system, which is what we really care about.
+*  $$T_R$$ is the rotation temperature which is the excitation temperature / what you plug into Boltzmann to get the level population between the (1,1) and (2,2) states.
+*  $$T_{\mathrm{ex}}$$ is the radiative excitation temperature of the lines in question, i.e. between the symmetric and antisymmetric state of the line.  We will usually be referring to the (1,1) line in this case.
+
