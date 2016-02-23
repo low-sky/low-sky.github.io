@@ -81,10 +81,10 @@ $$
 where, for compactness, I use
 
 $$
-f_{JJ}\equiv \frac{1-\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}{1+\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}
+f_{JJ}\equiv \frac{1-\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}{1+\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}.
 $$
 
-Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature but this isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
+Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature and that the frequencies are approximately equal (and much less than $$T_{ex}$$).  In this regime, we set $$f_{22}/f_{11}=1$$.  The former assumption is isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ and $$N(\mathrm{p-NH}_3)=10^{14}~\mathrm{cm^{-2}}$$  gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
 We can use the exact same formulation for the $$(J,J)$$ line _mutatis mutandis_ and get a column density for each, but the trick is to relate the entire para-NH$$_3$$ column to the column in an individual state.  Currently, we engage in a deceit.  We assume a two-level system so that we can define $$T_R$$ such that
 
