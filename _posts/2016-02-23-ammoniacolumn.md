@@ -22,5 +22,8 @@ I think the right way to approach this is to throw back all the way to Rybicki a
 
 *  $$T_K$$ is the kinetic temperature of the system, which is what we really care about.
 *  $$T_R$$ is the rotation temperature which is the excitation temperature / what you plug into Boltzmann to get the level population between the (1,1) and (2,2) states.
-*  $$T_{\mathrm{ex}}$$ is the radiative excitation temperature of the lines in question, i.e. between the symmetric and antisymmetric state of the line.  We will usually be referring to the (1,1) line in this case.
+*  $$T_{\mathrm{ex}}$$ is the radiative excitation temperature of the lines in question, i.e. between the symmetric ($$\ell$$) and antisymmetric ($$u$$) state of the line or the upper/lower levels of the individual $$(J,K)$$ states.  We will usually be referring to the (1,1) line in this case.
 
+Going all the way to the blast from the past, we have the opacity coefficient as defined by radiative properties and statistical mechanical considerations as
+
+$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} n_{(1,1)} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}\right]$$
