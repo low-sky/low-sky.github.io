@@ -76,12 +76,12 @@ We can use the exact same formulation for the $$(J,J)$$ line _mutatis mutandis_ 
 
 $$
 \begin{eqnarray}
-\frac{\tau_{(2,2)}}{\tau_{(1,1)}} &=&\frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{A_{(2,2)}}{A_{(1,1)}} \frac{f_{22}}{f_{11}}\\,
+\frac{\tau_{(2,2)}}{\tau_{(1,1)}} &=&\frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{A_{(2,2)}}{A_{(1,1)}} \frac{f_{22}}{f_{11}},\\
 & = & \frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{2^2}{2\cdot 3} \frac{2}{1}  \frac{f_{22}}{f_{11}}.
 \end{eqnarray}
 $$
 
-where, for compactness, I use
+where the numerical factors arise from the Einstein A values and for compactness I use
 
 $$
 f_{JJ}\equiv \frac{1-\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}{1+\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}.
@@ -96,7 +96,9 @@ $$ N_{(2,2)} = N_{(1,1)} \frac{5}{3} \exp\left(-\frac{\Delta E}{kT_R}\right)$$
 where the 5/3 is the ratio of the rotational statistical weights of the states ($$g_J = 2J+1$$). From here we have that $$T_R$$ can be related to the kinetic temperature using the work of Swift (the man, the myth, the legend) et al. (2005):
 
 $$
-T_R = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7}{T_K}\right)\right]\right\}.
+T_R = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7~\mathrm{K}}{T_K}\right)\right]\right\}.
 $$
+
+Here $$T_0=41.5~\mathrm{K}$$, which is the energy difference between the (2,2) and the (1,1) states. The deceit arises because we calculate all the other level populations based on this rotation temperature.  Then, we use this to infer a (1,1) column density and immediately scale that to a total column via the _kinetic temperature_.  Really, this should be the rotational temperature since that defines the partition of the molecules among the different rotational states.  Unfortunately, the rotational temperature should be different for every pair of rotational metastable states.  This should definitely _not_ be the excitation temperature as that defines the radiative excitation of the individual parts of each inversion transition.  To be self consistent, we should calculate $$N_{(J,J)}$$ as functions of $$T_K, n,\mathrm{~and}~N$$.  The easiest way to do this might be to wrap the RADEX grids, but we might be able to do this using the full coefficients from LAMDA and do the detailed balance solution and an eigenvalue problem.
 
   
