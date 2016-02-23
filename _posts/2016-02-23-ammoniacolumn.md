@@ -39,11 +39,11 @@ $$\frac{N_u}{N_l}=\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\righ
 
 so 
 
-$$N_l=\frac{N_{(1,1)}}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)$$
+$$N_l=\frac{N_{(1,1)}}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}$$
 
 and 
 
-$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{\left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]}{{1+\exp \frac{g_u}{g_l} \left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}}$$
+$$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{\left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}$$
 
 Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature but this isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
