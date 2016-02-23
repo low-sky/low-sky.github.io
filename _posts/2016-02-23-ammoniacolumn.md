@@ -60,7 +60,7 @@ $$ \tau_{(1,1)} = \int \alpha_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^
 
 This is neatly linked to the Friesen et al. (2009) formulation above noting that $$g_u = g_l = 1$$.
 
-Note that the Einstein $$A$$ values are given in terms of the dipole moments (c.g.s.) as 
+Note that the Einstein $$A$$ values are given in terms of the dipole moments (c.g.s.) as (Rybicki and Lightman 10.28b):
 
 $$A_{ul} = \frac{64 \pi^4 \nu_0^3}{3 h c^3} \frac{1}{g_u} |\mu_{ul}|^2$$
 
@@ -68,7 +68,21 @@ and Mangum and Shirley (2015), Equation 62 gives
 
 $$ |\mu_{ul}|^2 = \mu^2 \frac{K^2}{J_u(J_u+1)}$$
 
-and the fiducial dipole moment is $$\mu = 1.468\times 10^{-18}\mathrm{~esu~cm}$$.
+and the fiducial dipole moment is $$\mu = 1.468\times 10^{-18}\mathrm{~esu~cm}$$.  We are happily in the $$J=K$$ state, so 
+
+$$ |\mu_{ul}|^2 = \mu^2 \frac{J^2}{J(J+1)}.$$
+
+To get to the optical depths of the other lines, we usually scale from the (1,1) line.  For example:
+
+$$
+\frac{\tau_{(2,2)}}{\tau_{(1,1)}} = \frac{\nu^2_{(1,1)}}{\nu^2_{(2,2)}} \frac{N_{(2,2)}}{N_{(1,1)}} \frac{A_{(2,2)}}{A_{(1,1)}} \frac{f_{22}}{f_{11}},
+$$
+
+where, for compactness, I use
+
+$$
+f_{JJ}\equiv \frac{1-\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}{1+\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}
+$$
 
 Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature but this isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
