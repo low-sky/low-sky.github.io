@@ -35,7 +35,7 @@ $$ \tau = \int \kappa_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac
 Because the excitation temperature defines the ratio of the lower to the upper state, we can correct $$N_l$$ to $$N_{(1,1)}$$.
 
 
-$$ \frac{N_u}{N_l}=\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)$$
+$$\frac{N_u}{N_l}=\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)$$
 
 so 
 
