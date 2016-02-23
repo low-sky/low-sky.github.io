@@ -26,4 +26,4 @@ I think the right way to approach this is to throw back all the way to Rybicki a
 
 Going all the way to the blast from the past, we have the opacity coefficient as defined by radiative properties and statistical mechanical considerations as
 
-$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} n_{(1,1)} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}\right]$$
+$$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} n_{(1,1)} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]$$
