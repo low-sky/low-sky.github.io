@@ -29,3 +29,5 @@ Going all the way to the blast from the past, we have the opacity coefficient as
 $$ \kappa_\nu = \frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} n_{\ell} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right] \phi(\nu),$$
 
 where $$\phi(\nu)$$ is the line profile function such that $$\int \phi(\nu)d\nu=1$$.  Integrating over line of sight and frequency gives the total column density of the  lower state of the (1,1) line:
+
+$$ \tau = \int \kappa_\nu ds d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_\ell} N_{\ell} A_{u\ell} \left[1-\frac{h\nu_0}{k T_{\mathrm{ex}}}\right]$$
