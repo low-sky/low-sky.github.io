@@ -56,11 +56,14 @@ $$N_l=\frac{N_{(1,1)}}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}
 
 and 
 
-$$ \tau = \int \alpha_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}.$$
+$$ \tau_{(1,1)} = \int \alpha_\nu\, ds\, d\nu  =\frac{c^2}{8\pi} \frac{1}{\nu_0^2} \frac{g_u}{g_l} N_{(1,1)} A_{ul} \frac{1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}{1+\frac{g_u}{g_l}\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)}.$$
 
-This is neatly linked to the Friesen et al. (2009) formulation above.  
+This is neatly linked to the Friesen et al. (2009) formulation above noting that $$g_u = g_l = 1$$.
 
 Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature but this isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
+We can use the exact same formulation for the $$(J,J)$$ line _mutatis mutandis_ and get a column density for each, but the trick is to relate the entire para-NH$$_3$$ column to the column in an individual state.  Currently, we engage in a deceit.  We assume a two-level system so that we can define $$T_R$$ such that
+
+$$ N_{(2,2)} = N_{(1,1)} \frac{5}{3} \exp\left(-\frac{\Delta E}{kT}\right)$$
 
 
