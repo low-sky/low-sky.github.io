@@ -96,7 +96,7 @@ $$ N_{(2,2)} = N_{(1,1)} \frac{5}{3} \exp\left(-\frac{\Delta E}{kT_R}\right)$$
 where the 5/3 is the ratio of the rotational statistical weights of the states ($$g_J = 2J+1$$). From here we have that $$T_R$$ can be related to the kinetic temperature using the work of Swift (the man, the myth, the legend) et al. (2005):
 
 $$
-T_R = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7}{T_K}\right)\right]\right}.
+T_R = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7}{T_K}\right)\right]\right\}.
 $$
 
   
