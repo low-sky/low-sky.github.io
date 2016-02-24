@@ -16,19 +16,19 @@ $$N(1,1) = \frac{8 \pi k \nu_0^2}{h c^3} \frac{1}{A_{1,1}} \sqrt{2\pi}\sigma_\nu
 Mangum and Shirley (2015):
 
 $$N_{tot} = \frac{3 h}{8 \pi \mu^2 R_i} \frac{J_u(J_u+1)}{K^2}
-\frac{Q_{rot}}{g_J g_K g_I} \frac{\exp{E_u/k_B T_{ex}}}{\exp{h \nu/k_B T_{ex}} - 1} \left[\frac{\int T_R dv}{f\left(J_\nu(T_ex)-J_\nu{T_B}\right) }\right]$$
+\frac{Q_{rot}}{g_J g_K g_I} \frac{\exp{E_u/k_B T_{ex}}}{\exp{h \nu/k_B T_{ex}} - 1} \left[\frac{\int T_{\mathrm{rot}} dv}{f\left(J_\nu(T_ex)-J_\nu{T_B}\right) }\right]$$
 
-I think the right way to approach this is to throw back all the way to Rybicki and Lightman style to model the formation of the line.  Our previous work fits the optical depth and then infers a column density.  Now we are using the column and a free parameter and then determining the optical depth from the column and excitation conditions.  
+I think the right way to approach this is to throw back all the way to Rybicki and Lightman style to model the formation of the line.  Our previous work fits the optical depth and then infers a column density.  Now we are using the column as a free parameter and then determining the optical depth from the column and excitation conditions.  
 
 First, there are three temperatures in play:
 
 *  $$T_K$$ is the kinetic temperature of the system, which is what we really care about.
-*  $$T_R$$ is the rotation temperature which is the excitation temperature / what you plug into Boltzmann to get the level population between the (1,1) and (2,2) states.
+*  $$T_{\mathrm{rot}}$$ is the rotation temperature which is the excitation temperature / what you plug into Boltzmann to get the level population between the (1,1) and (2,2) states.
 *  $$T_{\mathrm{ex}}$$ is the radiative excitation temperature of the lines in question, i.e. between the symmetric ($$l$$) and antisymmetric ($$u$$) state of the line or the upper/lower levels of the individual $$(J,K)$$ states.  
 
 Going all the way back in time to Rybicki and Lightman Equation 1.80 (LTE), we have the opacity coefficient as defined by radiative properties and statistical mechanical considerations as
 
-$$ \alpha_\nu = \frac{h\nu_0}{4\pi} n_1 B_{lu} \left[1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)\right] \phi(\nu)$$
+$$ \alpha_\nu = \frac{h\nu_0}{4\pi} n_l B_{lu} \left[1-\exp\left(-\frac{h\nu_0}{kT_{\mathrm{ex}}}\right)\right] \phi(\nu)$$
 
 plus some things that are always true
 
@@ -87,18 +87,18 @@ $$
 f_{JJ}\equiv \frac{1-\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}{1+\exp\left(-\frac{h\nu_{(J,J)}}{kT_{\mathrm{ex}}}\right)}.
 $$
 
-Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature and that the frequencies are approximately equal (and much less than $$T_{ex}$$).  In this regime, we set $$f_{22}/f_{11}=1$$.  The former assumption is isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ and $$N(\mathrm{p-NH}_3)=10^{14}~\mathrm{cm^{-2}}$$  gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
+Our fitting usually proceeds under the assumption that the (1,1) and the (2,2) line have the same radiative excitation temperature and that the frequencies are approximately equal (and much less than $$kT_{\mathrm{ex}}/h$$).  In this regime, we set $$f_{22}/f_{11}=1$$.  The former assumption is isn't necessarily the case.  Using RADEX for $$n=10^4~\mathrm{cm}^{-3}$$ and $$T_{K} = 15~\mathrm{K}$$ and $$N(\mathrm{p-NH}_3)=10^{14}~\mathrm{cm^{-2}}$$  gives $$T_{\mathrm{ex},(1,1)} = 8.5~\mathrm{K}$$ and $$T_{\mathrm{ex},(2,2)} = 6.9~\mathrm{K}$$.
 
-Currently, we engage in a deceit.  We assume a two-level system so that we can define $$T_R$$ such that
+Currently, we engage in a deceit.  We assume a two-level system so that we can define $$T_{\mathrm{rot}}$$ such that
 
-$$ N_{(2,2)} = N_{(1,1)} \frac{5}{3} \exp\left(-\frac{\Delta E}{kT_R}\right)$$
+$$ N_{(2,2)} = N_{(1,1)} \frac{5}{3} \exp\left(-\frac{\Delta E}{kT_{\mathrm{rot}}}\right)$$
 
-where the 5/3 is the ratio of the rotational statistical weights of the states ($$g_J = 2J+1$$). From here we have that $$T_R$$ can be related to the kinetic temperature using the work of Swift (the man, the myth, the legend) et al. (2005):
+where the 5/3 is the ratio of the rotational statistical weights of the states ($$g_J = 2J+1$$). From here we have that $$T_{\mathrm{rot}}$$ can be related to the kinetic temperature using the work of Swift (the man, the myth, the legend) et al. (2005):
 
 $$
-T_R = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7~\mathrm{K}}{T_K}\right)\right]\right\}.
+T_{\mathrm{rot}} = T_K \left\{1+\frac{T_{K}}{T_{0}} \ln \left[1+\frac{3}{5} \exp\left(\frac{-15.7~\mathrm{K}}{T_K}\right)\right]\right\}.
 $$
 
-Here $$T_0=41.5~\mathrm{K}$$, which is the energy difference between the (2,2) and the (1,1) states. The deceit arises because we calculate all the other level populations based on this rotation temperature.  Then, we use this to infer a (1,1) column density and immediately scale that to a total column via the _kinetic temperature_.  Really, this should be the rotational temperature since that defines the partition of the molecules among the different rotational states.  Unfortunately, the rotational temperature should be different for every pair of rotational metastable states.  This should definitely _not_ be the excitation temperature as that defines the radiative excitation of the individual parts of each inversion transition.  To be self consistent, we should calculate $$N_{(J,J)}$$ as functions of $$T_K, n,\mathrm{~and}~N$$.  The easiest way to do this might be to wrap the RADEX grids, but we might be able to do this using the full coefficients from LAMDA and do the detailed balance solution and an eigenvalue problem.  
+Here $$T_0=41.5~\mathrm{K}$$, which is the energy difference between the (2,2) and the (1,1) states. The deceit arises because we calculate all the other level populations based on this rotation temperature.  Then, we use this to infer a (1,1) column density and immediately scale that to a total column via the _kinetic temperature_.  Really, this should be the rotational temperature since that defines the partition of the molecules among the different rotational states.  Unfortunately, the rotational temperature should be different for every pair of rotational metastable states.  This should definitely _not_ be the excitation temperature as that defines the level populations of the individual parts of each inversion transition.  To be self consistent, we should calculate $$N_{(J,J)}$$ as functions of $$T_K, n,\mathrm{~and}~N$$.  The easiest way to do this might be to wrap the RADEX grids, but we might be able to do this using the full coefficients from LAMDA and do the detailed balance solution and an eigenvalue problem.  
 
 Recommendation: we could make the partition function for the para states be calculated from the rotation temperature rather than the kinetic temperature, which would include only small deviations arising from the (4,4) states at 200 K.  
