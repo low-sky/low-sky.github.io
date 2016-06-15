@@ -25,7 +25,18 @@ $$
 
 based on the work of [Landy & Szalay (1983)](http://adsabs.harvard.edu/abs/1993ApJ...412...64L).  Here, $$DD(\mathbf{\delta r})$$ is notation that means the number of galaxies (of $$n$$ total) found in the actual data with separations of $$\mathbf{\delta r}$$.  This must be a binned estimator where you consider the number in a small interval around $$\mathbf{\delta r}$$.  $$RR$$ is number of the separation between pairs of galaxies in a randomized set of $$r$$ galaxies, with the same selection volume as the original survey producing $$DD$$.  The term $$DR$$ is a mix term where one point is drawn from the original data list and one from the randomized sample.  Terms with random samples can be generated from multiple realizations and then averaged.
 
-We are interested in the relationship between $$\xi(\mathbf{\delta r})$$ and $$S_2(\mathbf{\delta r})$$ (ignoring for the moment the $$\delta v$$ component).  Furthermore, we want to consider a field, i.e., not a bunch of point-like galaxies but rather a continuous function.  We are specifically considering the case of images of molecular emission.  Instead of partitioning the emission into molecular clouds, we are instead going to calculate the correlation function between positions in an image. If we consider a pixelated image with intensity values $$I$$, we define the correlation between
+We are interested in the relationship between $$\xi(\mathbf{\delta r})$$ and $$S_2(\mathbf{\delta r})$$ (ignoring for the moment the $$\delta v$$ component).  Furthermore, we want to consider a field, i.e., not a bunch of point-like galaxies but rather a continuous function.  We are specifically considering the case of images of molecular emission.  Instead of partitioning the emission into molecular clouds, we are instead going to calculate the correlation function between positions in an image. If we consider a pixelated image with intensity values $$I$$, we define the correlation function between two pixels using the geometry described in this figure:
 
 ![Correlation Function](/images/CorrelationFunc.png)
 
+If we were considering these pixels as being regions filled with galaxies and the number of galaxies in the pixels are $$I(\mathbf{r}_1)$$ and $$I(\mathbf{r}_2)$$ respectively, then the correlation function with have a contribution from this pair of pixels that is equal to the number of possible data pairs that could be formed between these two values: $$I(\mathbf{r}_1) \cdot I(\mathbf{r}_2)$$.  Then, the $$DD$$ term of the correlation function would look like:
+
+$$
+DD(\mathbf{\delta r}) = \langle I(\mathbf{r}) \cdot I(\mathbf{r+\delta r}) \rangle_{\mathbf{r}}.
+$$
+
+Similarly, the $RR$$ term would look a lot like the average product of a bunch of random draws from the pixels $$I(\mathbf{r})$$.
+
+$$
+RR(\mathbf{\delta r}) = \frac{1}{n_i n_j}\sum_{ij} I(\mathbf{r}_i) \cdot I(\mathbf{r}_j) 
+$$
