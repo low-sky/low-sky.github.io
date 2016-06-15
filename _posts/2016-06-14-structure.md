@@ -35,7 +35,7 @@ $$
 DD(\mathbf{\delta r}) = \langle I(\mathbf{r}) \cdot I(\mathbf{r+\delta r}) \rangle_{\mathbf{r}}.
 $$
 
-Similarly, the $RR$$ term would look a lot like the average product of a bunch of random draws from the pixels $$I(\mathbf{r})$$.
+Similarly, the $$RR$$ term would look a lot like the average product of a bunch of random draws from the pixels $$I(\mathbf{r})$$.
 
 $$
 RR(\mathbf{\delta r}) = \frac{1}{n_i n_j} \sum_{ij} I(\mathbf{r}_i) \cdot I(\mathbf{r}_j) 
