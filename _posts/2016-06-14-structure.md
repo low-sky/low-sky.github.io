@@ -38,5 +38,5 @@ $$
 Similarly, the $RR$$ term would look a lot like the average product of a bunch of random draws from the pixels $$I(\mathbf{r})$$.
 
 $$
-RR(\mathbf{\delta r}) = \frac{1}{n_i n_j}\sum_{ij} I(\mathbf{r}_i) \cdot I(\mathbf{r}_j) 
+RR(\mathbf{\delta r}) = \frac{1}{n_i n_j} \sum_{ij} I(\mathbf{r}_i) \cdot I(\mathbf{r}_j) 
 $$
