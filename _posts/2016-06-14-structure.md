@@ -23,8 +23,7 @@ $$
 \xi(\mathbf{\delta r}) = \frac{r(r-1)}{n(n-1)} \frac{DD(\mathbf{\delta r})}{RR(\mathbf{\delta r})} - \frac{(r-1)}{n} \frac{DR(\mathbf{\delta r})}{RR(\mathbf{\delta r})} +1,
 $$
 
-based on the work of [Landy & Szalay (1983)](http://adsabs.harvard.edu/abs/1993ApJ...412...64L).  
-Here, $DD$ is notation that means the 
+based on the work of [Landy & Szalay (1983)](http://adsabs.harvard.edu/abs/1993ApJ...412...64L).  Here, $$DD(\mathbf{\delta r})$$ is notation that means the number of galaxies (of $$n$$ total) found in the actual data with separations of $$\mathbf{\delta r}$$.  This must be a binned estimator where you consider the number in a small interval around $$\mathbf{\delta r}$$.  $$RR$$ is number of the separation between pairs of galaxies in a randomized set of $$r$$ galaxies, with the same selection volume as the original survey producing $$DD$$.  The term $$DR$$ is a mix term where one point is drawn from the original data list and one from the randomized sample.  Terms with random samples can be generated from multiple realizations and then averaged.
 
 We are interested in the relationship between $$\xi(\mathbf{\delta r})$$ and $$S_2(\mathbf{\delta r})$$ (ignoring for the moment the $$\delta v$$ component).  Furthermore, we want to consider a field, i.e., not a bunch of point-like galaxies but rather a continuous function.  We are specifically considering the case of images of molecular emission.  Instead of partitioning the emission into molecular clouds, we are instead going to calculate the correlation function between positions in an image. If we consider a pixelated image with intensity values $$I$$, we define the correlation between
 
