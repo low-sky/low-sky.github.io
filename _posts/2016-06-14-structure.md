@@ -47,7 +47,7 @@ $$
 RR(\mathbf{\delta r}) = \frac{1}{n_i} \sum_{i} I(\mathbf{r}_i) \cdot \frac{1}{n_j}\sum_j I(\mathbf{r}_j) = \left[\langle I(\mathbf{r}) \rangle_{\mathbf{r}}\right]^2.
 $$
 
-Or, this is the mean value of the image, squared.  Because Monte Carlo beats actually thinking any day, I verified this by doing many random draws from an image and calculating the average product.  It checks out.  By similar reasoning, I think that $$DR==RR$$ for images, but I haven't checked this.
+Or, this is the mean value of the image, squared.  Because Monte Carlo beats actually thinking any day, I verified this by doing many random draws from an image and calculating the average product.  It checks out.  By similar reasoning, I think that $$DR=RR$$ for images, but I haven't checked this.
 
 Finally, the connection to structure functions comes from expanding the square in the structure function:
 
