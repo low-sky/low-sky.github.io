@@ -53,8 +53,8 @@ Finally, the connection to structure functions comes from expanding the square i
 
 $$
 \begin{eqnarray}
-S_2(\mathbf{\delta r}) & = & \left\langle \left[I(\mathbf{r})-I(\mathbf{r}+\mathbf{\delta r}) \right]^2\right\rangle_{\mathbf{r}} \\
-& = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2 \left \langle I(\mathbf{r}) I(\mathbf{r+\delta r})\right\rangle \\
-& = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2  \left[\langle I(\mathbf{r}) \rangle\right]^2 \xi(\mathbf{\delta r})
+S_2(\mathbf{\delta r}) & = & \left\langle \left[I(\mathbf{r})-I(\mathbf{r}+\mathbf{\delta r}) \right]^2\right\rangle_{\mathbf{r}}, \\
+& = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2 \left \langle I(\mathbf{r}) I(\mathbf{r+\delta r})\right\rangle, \\
+& = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2  \left[\langle I(\mathbf{r}) \rangle\right]^2 \xi(\mathbf{\delta r}).
 \end{eqnarray}
 $$
