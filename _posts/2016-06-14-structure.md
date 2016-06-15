@@ -38,5 +38,13 @@ $$
 Similarly, the $$RR$$ term would look a lot like the average product of a bunch of random draws from the pixels $$I(\mathbf{r})$$.
 
 $$
-RR(\mathbf{\delta r}) = \frac{1}{n_i n_j} \sum_{ij} I(\mathbf{r}_i) \cdot I(\mathbf{r}_j) 
+RR(\mathbf{\delta r}) = \frac{1}{n_i n_j} \sum_{i,j} I(\mathbf{r}_i) \cdot I(\mathbf{r}_j).
 $$
+
+Since the averages represent random draws from the image values, there is no correlation between the draws.  Thus, we get that the average value of the product is the product of the averages:
+
+$$
+RR(\mathbf{\delta r}) = \frac{1}{n_i} \sum_{i} I(\mathbf{r}_i) \cdot \frac{1}{n_j}\sum_j I(\mathbf{r}_j) = \left(\langle I(\mathbf{r}) \rangle_{\mathbf{r}}\right)^2.
+$$
+
+Or, this is the mean value of the image, squared.
