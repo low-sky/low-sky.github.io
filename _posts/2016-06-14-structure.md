@@ -44,7 +44,17 @@ $$
 Since the averages represent random draws from the image values, there is no correlation between the draws.  Thus, we get that the average value of the product is the product of the averages:
 
 $$
-RR(\mathbf{\delta r}) = \frac{1}{n_i} \sum_{i} I(\mathbf{r}_i) \cdot \frac{1}{n_j}\sum_j I(\mathbf{r}_j) = \left(\langle I(\mathbf{r}) \rangle_{\mathbf{r}}\right)^2.
+RR(\mathbf{\delta r}) = \frac{1}{n_i} \sum_{i} I(\mathbf{r}_i) \cdot \frac{1}{n_j}\sum_j I(\mathbf{r}_j) = \left[\langle I(\mathbf{r}) \rangle_{\mathbf{r}}\right]^2.
 $$
 
-Or, this is the mean value of the image, squared.
+Or, this is the mean value of the image, squared.  Because Monte Carlo beats actually thinking any day, I verified this by doing many random draws from an image and calculating the average product.  It checks out.  By similar reasoning, I think that $$DR==RR$$ for images, but I haven't checked this.
+
+Finally, the connection to structure functions comes from expanding the square in the structure function:
+
+$$
+\begin{eqnarray}
+S_2(\mathbf{\delta r}) & = & \left\langle \left[I(\mathbf{r})-I(\mathbf{r}+\mathbf{\delta r}) \right]^2\right\rangle_{\mathbf{x}} \\
+& = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2 \left \langle I(\mathbf{r}) I(\mathbf{r+\delta r})\right\rangle \\
+& = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2  \left[\langle I(\mathbf{r}) \rangle\right]^2 \xi(\mathbf{\delta r})
+\end{eqnarray}
+$$
