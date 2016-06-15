@@ -6,7 +6,7 @@ title: Structures and Correlations
 With a student, I've been working of developing structure function and correlation function approach to analyzing spectral line data cubes.  First, we've been working with the structure function of order $$p$$:
 
 $$
-S_p(\mathbf{\delta r},\delta v) = \left\langle \left|I(\mathbf{r},v)-I(\mathbf{r}+\mathbf{\delta r},v+\delta v) \right|^p\right\rangle_{\mathbf{x}}
+S_p(\mathbf{\delta r},\delta v) = \left\langle \left|I(\mathbf{r},v)-I(\mathbf{r}+\mathbf{\delta r},v+\delta v) \right|^p\right\rangle_{\mathbf{r}}
 $$
 
 where $$p=2$$ usually.  We've investigated a set of properties including the noise behaviour of the structure function and the maximum value attainable.  The final thing to consider is the relationship between the structure function and the correlation function $$\xi(\delta r)$$.  In cosmology, the [correlation function](https://ned.ipac.caltech.edu/level5/March04/Jones/Jones5_2.html) is defined as the excess probability of finding a galaxy within a distance $$\delta \mathbf{r}$$ of another galaxy:
@@ -53,7 +53,7 @@ Finally, the connection to structure functions comes from expanding the square i
 
 $$
 \begin{eqnarray}
-S_2(\mathbf{\delta r}) & = & \left\langle \left[I(\mathbf{r})-I(\mathbf{r}+\mathbf{\delta r}) \right]^2\right\rangle_{\mathbf{x}} \\
+S_2(\mathbf{\delta r}) & = & \left\langle \left[I(\mathbf{r})-I(\mathbf{r}+\mathbf{\delta r}) \right]^2\right\rangle_{\mathbf{r}} \\
 & = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2 \left \langle I(\mathbf{r}) I(\mathbf{r+\delta r})\right\rangle \\
 & = &  \left\langle \left[I(\mathbf{r}) \right]^2 \right\rangle + \left\langle \left[I(\mathbf{r+\delta r}) \right]^2 \right\rangle - 2  \left[\langle I(\mathbf{r}) \rangle\right]^2 \xi(\mathbf{\delta r})
 \end{eqnarray}
