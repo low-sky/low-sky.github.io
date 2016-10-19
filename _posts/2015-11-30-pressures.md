@@ -5,28 +5,28 @@ title: Degeneracy Pressures
 
 In ASTRO 320, we motivated a cartoon view of degeneracy pressure based on filling states of phase space.  We argued that a one-dimensional phase space can be separated into cells of phase volume equal to Planck's constant $$h$$.  Into each cell, we can pack at most 2 fermions (usually electrons), where the 2 comes from the two spin states of the electron.  This means that in a three dimensional phase space, the cell volumes are $$h^3 = \Delta x \Delta y \Delta z \Delta p_x \Delta p_y \Delta p_z$$, and each cell can hold the two electrons.  
 
-Now, we ask the question "What is the maximum momentum found in a gas of fermions given a volume density of fermions $$N_e$$?"  If the system is hot, then this question is answered by the Maxwell-Boltzmann velocity distributions and can be figured out in terms of statistical mechanics.  However, if the thermal energy is negligible, this question will be "what is the maximum density in phase space we can achieve by packing the particles in at their smallest possible momenta?"  (In the intermediate case, we turn to [Fermi-Dirac statistics](https://en.wikipedia.org/wiki/Fermi%E2%80%93Dirac_statistics) for the answer).
+Now, we ask the question "What is the maximum momentum found in a gas of fermions given a volume density of fermions $$n_e$$?"  If the system is hot, then this question is answered by the Maxwell-Boltzmann velocity distributions and can be figured out in terms of statistical mechanics.  However, if the thermal energy is negligible, this question will be "what is the maximum density in phase space we can achieve by packing the particles in at their smallest possible momenta?"  (In the intermediate case, we turn to [Fermi-Dirac statistics](https://en.wikipedia.org/wiki/Fermi%E2%80%93Dirac_statistics) for the answer).
 
-Focusing on the no-thermal-energy case, we start filling states from $$p=0$$ up to some $$p_{\mathrm{max}}$$.  If $$N_{\mathrm{tot}}$$ particles fill a volume $$V$$ and cover up to this maximum momentum, they occupy a volume of phase space equal to
+Focusing on the no-thermal-energy case, we start filling states from $$p=0$$ up to some $$p_{\mathrm{max}}$$.  If $$n_{\mathrm{tot}}$$ particles fill a volume $$V$$ and cover up to this maximum momentum, they occupy a volume of phase space equal to
 $$
 \frac{4\pi}{3} p_{\mathrm{max}}^3 V.
 $$
 Note that we've used the idea that magnitude vector $$p = (p_x^2 + p_y^2 + p_z^2)^{1/2}$$, and then the similarity of the problem to kinematics to build up the idea of a momentum "volume."  The value $$p_{\mathrm{max}}$$ is just a radius of a sphere in momentum space and the volume of that sphere is $$ 4\pi p_{\mathrm{max}} / 3$$.  The minimum possible value for $$p_{\mathrm{max}}$$ occurs when this phase volume equals the minimum possible value, which is
 $$
-\frac{h^3}{2} N_{\mathrm{tot}},
+\frac{h^3}{2} n_{\mathrm{tot}},
 $$
 where the 2 accounts for the two spin states. Equating these two expressions and solving for $$p_\mathrm{max}$$ gives
 
 $$
 \begin{eqnarray*}
-\frac{4\pi}{3} p_{\mathrm{max}}^3 V & = &\frac{h^3}{2} N_{\mathrm{tot}}\\
-p_{\mathrm{max}}^3 & = & \frac{3 h^3}{8\pi} \frac{N_{\mathrm{tot}}}{V} \\
-p_{\mathrm{max}}^3 & = & \frac{3 h^3}{8\pi} N_e \\
-p_{\mathrm{max}} & = & \left[\frac{3 h^3}{8\pi} N_e \right]^{1/3}.
+\frac{4\pi}{3} p_{\mathrm{max}}^3 V & = &\frac{h^3}{2} n_{\mathrm{tot}}\\
+p_{\mathrm{max}}^3 & = & \frac{3 h^3}{8\pi} \frac{n_{\mathrm{tot}}}{V} \\
+p_{\mathrm{max}}^3 & = & \frac{3 h^3}{8\pi} n_e \\
+p_{\mathrm{max}} & = & \left[\frac{3 h^3}{8\pi} n_e \right]^{1/3}.
 \end{eqnarray*}
 $$
 
-Here, we have replaced $$N_{\mathrm{tot}}/{V}$$ with the electron volume density $$N_e$$.  
+Here, we have replaced $$n_{\mathrm{tot}}/{V}$$ with the electron volume density $$n_e$$.  
 
 ## The Pressure Integral
 
@@ -41,7 +41,7 @@ P & = & \frac{F}{A} \\
 \end{eqnarray*}
 $$
 
-where $$V$$ is a volume with a single particle of the beam in it.  We can then identify $$1/V$$ as the volume density $$N$$ so $$P = 2 N p_v \cos^2 \theta$$.  
+where $$V$$ is a volume with a single particle of the beam in it.  We can then identify $$1/V$$ as the volume density $$n$$ so $$P = 2 n p_v \cos^2 \theta$$.  
 
 Now, gases of particles aren't perfect beams with a set of particles all having the same momentum.  Particles also strike the barrier from all different directions.  To account for these two effects, we need to extend this simple idea a bit.  Dealing with the direction component first, we need to consider the average value that $$\cos^2 \theta$$ term takes when looking over all possible angles that can hit the wall.  The formal version is to consider spherical-polar coordinates, and average over the portion of the sphere that is pointing toward the barrier, i.e., for $$0 \le \theta < \pi/2$$.  Then, this average [gives](http://www.wolframalpha.com/input/?i=Integrate%28cos%28x%29^2+sin%28x%29%2Cx%3D0..pi%2F2%29%2FIntegrate%28sin%28x%29%2Cx%3D0..pi%2F2%29)
 
@@ -57,13 +57,13 @@ Informally, the same result can be argued from $$p v \cos^2 \theta = p_z v_z \pr
 In addition to coming from different directions, particles have different velocities and momenta.  This is represented by taking a _distribution function_ for the momentum.  
 
 $$
-N = \int_0^{\infty} N_p(p) dp.
+n = \int_0^{\infty} n_p(p) dp.
 $$
 
 We've already seen something like these distribution functions, namely the [Maxwell-Boltzmann](https://en.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann_distribution) velocity distribution.  Combining these results gives
 
 $$
-P = \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,
+P = \frac{1}{3} \int_0^{\infty} n_{p} p v\, dp,
 $$
 
 as result which is sometimes called the pressure integral.
@@ -75,7 +75,7 @@ Previously, we saw the distribution in terms of speeds:
 
 $$
 \begin{eqnarray*}
-N &=& \int_0^{\infty} N_v(v) dv.\\
+n &=& \int_0^{\infty} n_v(v) dv.\\
 & = &\int_0^{\infty} \left(\frac{m}{2\pi k T} \right)^{3/2} \exp \left(-\frac{mv^2}{2 k T}\right) 4 \pi v^2\,dv.
 \end{eqnarray*}
 $$
@@ -84,21 +84,21 @@ However, using a non-relativistic gas of particles with mass $$m$$ gives $p = mv
 
 $$
 \begin{eqnarray*}
-N_p dp &=& N_v dv \\
+n_p dp &=& n_v dv \\
 & = & \left(\frac{m}{2\pi k T} \right)^{3/2} \exp \left(-\frac{mv^2}{2 k T}\right) 4 \pi v^2\,dv.\\
 & = & \left(\frac{m}{2\pi k T} \right)^{3/2} \exp \left(-\frac{p^2}{2m k T}\right)\, m^3 \, 4 \pi p^2\,dp.\\
 & = & \left(\frac{1}{2\pi m k T }\right)^{3/2} \exp \left(-\frac{p^2}{2m k T}\right) \, 4 \pi p^2\,dp.
 \end{eqnarray*}
 $$
 
-If we substitute $$ v = p/m$$ and the expression for $$N_p\, dp$$ into the pressure integral as above we [get](http://www.wolframalpha.com/input/?i=Integrate%28%282*pi*m*k*T%29^%28-3%2F2%29*+4*pi+*+p^4+*exp+%28-p^2%2F%282+m+k+T%29%29%2Cp%3D0..infty%29)
+If we substitute $$ v = p/m$$ and the expression for $$n_p\, dp$$ into the pressure integral as above we [get](http://www.wolframalpha.com/input/?i=Integrate%28%282*pi*m*k*T%29^%28-3%2F2%29*+4*pi+*+p^4+*exp+%28-p^2%2F%282+m+k+T%29%29%2Cp%3D0..infty%29)
 
 $$
 \begin{eqnarray*}
-P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
-& = &\frac{1}{3m} \int_0^\infty N_p p^2\, dp,\\
-& = & \frac{1}{3m} N (3 m kT), \\
-& = & N k T.
+P &= & \frac{1}{3} \int_0^{\infty} n_{p} p v\, dp,\\
+& = &\frac{1}{3m} \int_0^\infty n_p p^2\, dp,\\
+& = & \frac{1}{3m} n (3 m kT), \\
+& = & n k T.
 \end{eqnarray*}
 $$
 
@@ -107,7 +107,7 @@ $$
 In this case, the distribution function for momentum is actually much easier to understand.  All states are occupied up to some maximum momentum $$p_{\mathrm{max}}$$ and then the states are empty above that.  The number of states between $$p$$ and $$p+dp$$ is just the momentum volume of a thin spherical shell $$4\pi p^2 \, dp$$ so 
 
 $$
-N_p(p) = \left\{\begin{array}[rl]
+n_p(p) = \left\{\begin{array}[rl]
 2 h^{-3} 4 \cdot \pi p^2 dp & ; p \le p_{\mathrm{max}} \\
 0 & ; p > p_{\mathrm{max}}
 \end{array}\right.
@@ -117,7 +117,7 @@ Above the $$2/h^3$$ term represents the number of particles per unit phase space
 
 $$
 \begin{eqnarray*}
-P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
+P &= & \frac{1}{3} \int_0^{\infty} n_{p} p v\, dp,\\
 &=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} \frac{p^2}{m} \frac{8\pi}{h^3} p^2 \, dp,\\
 &=& \frac{8\pi}{3 m h^3} \int_0^{p_{\mathrm{max}}} p^4\, dp,\\
 & = & \frac{8\pi}{15 m h^3} p_{\mathrm{max}}^5
@@ -127,16 +127,16 @@ $$
 Returning to the very top, we can substitute in our value for $$p_{\mathrm{max}}$$, namely that 
 
 $$
-p_{\mathrm{max}}  =  \left[\frac{3 h^3}{8\pi} N_e \right]^{1/3}
+p_{\mathrm{max}}  =  \left[\frac{3 h^3}{8\pi} n_e \right]^{1/3}
 $$ 
 
 so 
 
 $$
 \begin{eqnarray*}
-P & = & \frac{8\pi}{15 m h^3}  \left[\frac{3 h^3}{8\pi} N_e \right]^{5/3}\\
-&=& \frac{8\pi}{15} \left(\frac{3}{8\pi}\right)^{5/3} \frac{h^2}{m} N_e^{5/3} \\
-&= & \left(\frac{3}{8\pi}\right)^{2/3} \frac{h^2}{5 m} N_e^{5/3}.
+P & = & \frac{8\pi}{15 m h^3}  \left[\frac{3 h^3}{8\pi} n_e \right]^{5/3}\\
+&=& \frac{8\pi}{15} \left(\frac{3}{8\pi}\right)^{5/3} \frac{h^2}{m} n_e^{5/3} \\
+&= & \left(\frac{3}{8\pi}\right)^{2/3} \frac{h^2}{5 m} n_e^{5/3}.
 \end{eqnarray*}
 $$
 
@@ -152,12 +152,12 @@ As the speeds of the particles approach the speed of light, their momentum gets 
 
 $$
 \begin{eqnarray*}
-P &= & \frac{1}{3} \int_0^{\infty} N_{p} p v\, dp,\\
+P &= & \frac{1}{3} \int_0^{\infty} n_{p} p v\, dp,\\
 &=& \frac{1}{3} \int_0^{p_{\mathrm{max}}} p c  \frac{8\pi}{h^3} p^2 \, dp,\\
 &=& \frac{8\pi c}{3 h^3} \int_0^{p_{\mathrm{max}}}  p^3 \, dp,\\
 &=&  \frac{2\pi c}{3 h^3} p_{\mathrm{max}}^4,\\
-& = & \frac{2\pi c}{3 h^3} \left[\frac{3 h^3}{8\pi} N_e \right]^{4/3},\\
-& = & \left(\frac{3}{8\pi}\right)^{1/3} \frac{hc}{4} N_e^{4/3}.
+& = & \frac{2\pi c}{3 h^3} \left[\frac{3 h^3}{8\pi} n_e \right]^{4/3},\\
+& = & \left(\frac{3}{8\pi}\right)^{1/3} \frac{hc}{4} n_e^{4/3}.
 \end{eqnarray*}
 $$
 
