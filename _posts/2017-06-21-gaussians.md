@@ -20,7 +20,7 @@ print(im1.commonbeam())
 print(im2.commonbeam())
 ```
 
-This yields the following results, which should be identical.
+This yields the following results, which should be identical but are not.
 ```
 {'major': {'value': 4.211865471480522, 'unit': 'arcsec'}, 'pa': {'value': 29.99999999999998, 'unit': 'deg'}, 'minor': {'value': 3.658232394188034, 'unit': 'arcsec'}}
 {'major': {'value': 4.343317398689631, 'unit': 'arcsec'}, 'pa': {'value': 29.25631919084969, 'unit': 'deg'}, 'minor': {'value': 3.5897767228849267, 'unit': 'arcsec'}}
@@ -28,11 +28,36 @@ This yields the following results, which should be identical.
 
 This should be yielding a common beam that encompasses each of the contributing beams.  Then, each image could be convolved up to a larger resolution. However, this beam should be as small as possible to ensure a minimal loss of resolution.  Something is wrong and I suspect that the CASA solution applies a pairwise solution that is not robust in general.  
 
-To that end, we should find another solution.  The problem is:
+To that end, we should find another solution.  Since the argument of the exponential in a Gaussian has the form of an ellipse (or, as I recently learned a "quadratic form"), the problem reduces to finding finding the properties of ellipses which are the level sets of a Gaussian. The problem that needs solving is:
 
 _Given a set of ellipses indexed with $i$ and having major axes $a_i$, minor axes $b_i$ and angles of rotation with respect to the $x$-axis $\phi_i$, find the minimum area ellipse enclosing all the ellipses. Assume that the ellipses have a common centre at the origin._
 
 In researching this problem, we discovered that this problem reduces to a classic [convex optimization problem](http://cvxopt.org/examples/book/ellipsoids.html), though that solution really only matters for the case where the centres of the ellipses are not 
 
-I've attempted to solution this problem.  I have not proven that this solution is minimum area but it is robust against order changes in the contributing Gaussians.  
+I have a proposed solution this problem.  I have not proven rigorously that this solution is minimum area but it is robust against order changes in the contributing Gaussians. The solution works like this.
+
+From $\{a_i\}$ find the maximum semi-major axis $a_{\mathrm{max}}$ and the position angle corresponding to this ellipse $\phi_{\mathrm{max}}$.  By construction, the circle with radius $a_{\mathrm{max}}$ encloses all the ellipses.
+
+For each of the remaining ellipses, consider where the ends of the semi-major axes of the over ellipses fall in the frame rotated such that the major axis of the largest ellipses lies along the $x$-axis.  Specifically, we need to consider the points
+
+$$
+\begin{eqnarray}
+x_i' = & a_i \cos \Delta \phi_i \\
+y_i' = & a_i \sin \Delta \phi_i
+\end{eqnarray}
+$$
+
+where $\Delta \phi_i = \phi_i - \phi_{\mathrm{max}}$.  We want to identify the ellipse with major axis $a_{\mathrm{max}}$ and minor axis $b_i'$ that goes through this point.  By the definition of an ellipse, we know that 
+
+$$
+\frac{x_i'^2}{a_{\mathrm{max}}^2} + \frac{y_i'^2}{b'_i^2} = 1
+$$
+
+so that 
+
+$$
+b'_i = \left(\frac{a_i^2 \sin^2 \Delta \phi_i}{1 - \frac{ a_i^2 \cos^2 \Delta \phi_i}{a_{\mathrm{max}}^2}}\right)^{1/2}.
+$$
+
+Then, the minimum bounding ellipse is constructed as the maximum over the $b'_i$: $b_{\mathrm{max}} = \max b'_i$.
 
