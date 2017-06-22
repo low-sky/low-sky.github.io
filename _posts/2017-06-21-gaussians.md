@@ -34,7 +34,7 @@ _Given a set of ellipses indexed with $i$ and having major axes $a_i$, minor axe
 
 In researching this problem, we discovered that this problem reduces to a classic [convex optimization problem](http://cvxopt.org/examples/book/ellipsoids.html), though that solution really only matters for the case where the centres of the ellipses are not 
 
-I have a proposed solution this problem.  I have not proven rigorously that this solution is minimum area but it is robust against order changes in the contributing Gaussians. The solution works like this.
+I have a proposed solution this problem.  I have not proven rigorously that this solution is minimum area but it is a bounding ellipse that is robust against order changes in the contributing Gaussians. The solution works like this.
 
 From $\{a_i\}$ find the maximum semi-major axis $a_{\mathrm{max}}$ and the position angle corresponding to this ellipse $\phi_{\mathrm{max}}$.  By construction, the circle with radius $a_{\mathrm{max}}$ encloses all the ellipses.
 
@@ -60,4 +60,3 @@ b'_i = \left(\frac{a_i^2 \sin^2 \Delta \phi_i}{1 - \frac{ a_i^2 \cos^2 \Delta \p
 $$
 
 Then, the minimum bounding ellipse is constructed as the maximum over the $b'_i$: $b_{\mathrm{max}} = \max b'_i$.
-
