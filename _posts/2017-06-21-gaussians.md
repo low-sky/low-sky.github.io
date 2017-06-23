@@ -32,31 +32,55 @@ To that end, we should find another solution.  Since the argument of the exponen
 
 _Given a set of ellipses indexed with $i$ and having major axes $a_i$, minor axes $b_i$ and angles of rotation with respect to the $x$-axis $\phi_i$, find the minimum area ellipse enclosing all the ellipses. Assume that the ellipses have a common centre at the origin._
 
-In researching this problem, we discovered that this problem reduces to a classic [convex optimization problem](http://cvxopt.org/examples/book/ellipsoids.html), though that solution really only matters for the case where the centres of the ellipses are not 
+In researching this problem, we discovered that this problem reduces to a classic [convex optimization problem](http://cvxopt.org/examples/book/ellipsoids.html), and unfortunately that makes the problem fairly tricky. I have a proposed solution this problem.  I have not proven rigorously that this solution is minimum area but it is a bounding ellipse that is robust against order changes in the contributing Gaussians. The solution is an optimization.  I tried a few different construction approaches, but it seems like those are not terribly robust.  For simplicity, consider a ellipse in Cartesian coordinates.  The ellipse can be written as 
 
-I have a proposed solution this problem.  I have not proven rigorously that this solution is minimum area but it is a bounding ellipse that is robust against order changes in the contributing Gaussians. The solution works like this.
+$$
+\alpha x^2 + 2 \gamma xy + \beta y^2 = 1
+$$
 
-From $\{a_i\}$ find the maximum semi-major axis $a_{\mathrm{max}}$ and the position angle corresponding to this ellipse $\phi_{\mathrm{max}}$.  By construction, the circle with radius $a_{\mathrm{max}}$ encloses all the ellipses.
-
-For each of the remaining ellipses, consider where the ends of the semi-major axes of the over ellipses fall in the frame rotated such that the major axis of the largest ellipses lies along the $x$-axis.  Specifically, we need to consider the points
+In terms of our previous notation for ellipses, we have
 
 $$
 \begin{eqnarray}
-x_i' = & a_i \cos \Delta \phi_i \\
-y_i' = & a_i \sin \Delta \phi_i
+\alpha & = \frac{\cos^2 \phi}{a^2} + \frac{\sin^2 \phi}{b^2} \\
+\beta  & = \frac{\sin^2 \phi}{a^2} + \frac{\cos^2 \phi}{b^2} \\
+\gamma & = \cos \phi \sin \phi \left(\frac{1}{a^2} - \frac{1}{b^2} \right)
 \end{eqnarray}
 $$
 
-where $\Delta \phi_i = \phi_i - \phi_{\mathrm{max}}$.  We want to identify the ellipse with major axis $a_{\mathrm{max}}$ and minor axis $b_i'$ that goes through this point.  By the definition of an ellipse, we know that 
+The equation for an ellipse can then be written in snazzy "quadratic form" notation with $ \mathbf{x}^T \mathbf{A} \mathbf{x} = 1,$ 
+
+where 
 
 $$
-\frac{x_i'^2}{a_{\mathrm{max}}^2} + \frac{y_i'^2}{b'_i^2} = 1
+\mathbf{x} = \left[\begin{array}{c} x \\ y \end{array}\right] \quad \mathrm{and}
+\quad \mathbf{A} = \left[\begin{array}{cc} \alpha & \gamma \\ \gamma & \beta \end{array}\right].
 $$
 
-so that 
+The power of this notation comes from the truism that point $\mathbf{x}_1$ is inside the ellipse defined by $\mathbf{B}$ if and only if $ \mathbf{x}_1^T \mathbf{B} \mathbf{x}_1 < 1. $ Thus, for a set of points that satisfies the equation of the ellipse for ellipse $\mathbf{A}$, these points are inside the ellipse defined by $\mathbf{B}$ iff $ \mathbf{x}^T \mathbf{B} \mathbf{x} < 1.$  Hence, we can test if one ellipse is inside another if, for the same point $\mathbf{x}$ has 
 
 $$
-b'_i = \left(\frac{a_i^2 \sin^2 \Delta \phi_i}{1 - \frac{ a_i^2 \cos^2 \Delta \phi_i}{a_{\mathrm{max}}^2}}\right)^{1/2}.
-$$
+\begin{eqnarray}
+\mathbf{x}^T \mathbf{A} \mathbf{x} -  \mathbf{x}^T \mathbf{B} \mathbf{x} & \ge 0 \\
+\mathbf{x}^T (\mathbf{A-B}) \mathbf{x}  & \ge 0.
+\end{eqnarray)
+$$ 
 
-Then, the minimum bounding ellipse is constructed as the maximum over the $b'_i$: $b_{\mathrm{max}} = \max b'_i$.
+This particular form is familiar to linear algebraists since it is one of the conditions for the array $\mathbf{A-B}$ to be _non-negative_.  This must be true for all $\mathbf{x}$.  An array satisfies this form, then all its eigenvalues are non-negative or equivalently it hss a Cholesky decomposition.  Using this linaer algebra based test, we have a quick check on one ellipse being inside another.  
+
+This constraint gives us a handle for performing an optimization.  We can minimize the area of the ellipse defined by $\mathbf{B}$ subject to the condition that the matrix $\mathbf{A-B}$ has a Cholesky decomposition.  If we have a set of $\mathbf{A}_i$ we check that this condition is true for each $\mathbf{A}_i$.  The area of the ellipse is just $\det \mathbf{B}$, so we aim to minimize $(\det \mathbf{B})^{-1}$.
+
+This can be accomplished in `scipy.optimize.minimize`.  There are nominally constrained optimization algorithms such as `COBYLA`, but they were not functioning as intended.  Instead, I opted for the simpler method `Nelder-Mead` and put on a term that caused the objective function to jump to infinity if the non-negative matrix constraint is not satisfied.  The code seems to perform well.  For our use case, we are only optimizing over of-order 100 ellipses.  For an initial condition, I selected the bounding circle with radius equal to the maximum semi-major axis across the set of ellipses.
+
+It turns out this is an area where we need work.  Finding the global minimum is tricky since it depends on the position angle (i.e., the optimization algorithms I tried do not really give a good convergence).  I've posed my first attempts [here](http://nbviewer.jupyter.org/gist/low-sky/1eba1ebebe3606d400da030d2024970f)
+
+Now that we have a major and minor axis, the usual workflow is to then convolve by ellipses so that all planes / parts of the image have the same beam.  Having the maximum bounding ellipse ensures that every Gaussian can be convolved up to reach this elliptical size.  This takes advantage of the convolution of two elliptical Gaussians is a third elliptical Gaussian.  We can figure out the convolution kernel parameters that are needed to reach the target resolution. The math of this has been worked out and is already in the package `radio_beam` right about [here](https://github.com/radio-astro-tools/radio_beam/blob/master/radio_beam/beam.py#L316).
+
+We can thus find the convolution kernel, and we usually then proceed with a digital convolution using fast Fourier transforms.  Another issue arises when the required convolution kernel is thin along one direction.  Consider, for example, convolving an ellipse with major axis of 1 unit, minor axis of 0.5 unit and an angle of $0^\circ$ to a round beam.  Nominally, the convolution kernel in the major axis direction has a width of zero and the convolution only needs to be carried out in one direction.  This causes problems under the usual work flow: normally, you construct a digital representation of the kernel and use the FFTs, but this kernel will not be Nyquist sampled in the major axis direction.  This will lead to terrible artifacts on convolution.
+
+To avoid this problem we can go ahead an construct these thin kernels in the Fourier domain.  This is also formally incorrect.  Since the kernel is not Nyquist sampled in the original domain, the kernel should formally extend out to the edge of the Fourier domain without going to zero.  This is formally problematic since the Fourier domain has a toroidal topology (i.e., like a Pac-Man board) where moving off one side of the board wraps to the other side.  The convolution kernel runs right up to the edge of that domain.  However, I claim we can get away with this horrible feature as long as the original image data are Nyquist sampled.  In that case, there is no information in the image at high spatial frequencies, so the non-zero values of the kernel's Fourier transform will be multiplied by low amplitude values in the image Fourier transform.
+
+[Here's my attempt to code this.](https://github.com/Astroua/almaprops/blob/master/code/python/ftplane_convolution.py)
+
+Now we have a complete framework: find the minimal bounding ellipse, all beams up to it using the Fourier domain as necessary. 
+
