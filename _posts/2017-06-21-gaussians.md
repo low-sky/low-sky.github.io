@@ -66,7 +66,7 @@ $$
 \end{eqnarray}
 $$ 
 
-This particular form is familiar to linear algebraists since it is one of the conditions for the array $\mathbf{A-B}$ to be _non-negative_.  This must be true for all $\mathbf{x}$.  An array satisfies this form, then all its eigenvalues are non-negative or equivalently it hss a Cholesky decomposition.  Using this linaer algebra based test, we have a quick check on one ellipse being inside another.  
+This particular form is familiar to linear algebraists since it is one of the conditions for the array $\mathbf{A-B}$ to be _non-negative_.  This must be true for all $\mathbf{x}$.  An array satisfies this form, then all its eigenvalues are non-negative or equivalently it has a Cholesky decomposition.  Using this linaer algebra based test, we have a quick check on one ellipse being inside another.  
 
 This constraint gives us a handle for performing an optimization.  We can minimize the area of the ellipse defined by $\mathbf{B}$ subject to the condition that the matrix $\mathbf{A-B}$ has a Cholesky decomposition.  If we have a set of $\mathbf{A}_i$ we check that this condition is true for each $\mathbf{A}_i$.  The area of the ellipse is just $\det \mathbf{B}$, so we aim to minimize $(\det \mathbf{B})^{-1}$.
 
