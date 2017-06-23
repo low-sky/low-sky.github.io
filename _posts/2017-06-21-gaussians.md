@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ellipses and Convolutions
+title: The Elliptical Exegesis
 ---
 
 In interferometry, deconvolving the image replaces the interferometer's ugly point spread function (PSF) with a nice well-behaved Gaussian.  The original PSF is formally the transform of where the samples are found in the Fourier ($uv$) plane.  Since changes in frequency and the relative weights of antennas can affect the importance or even presences of certain samples in the $uv$ plane, the interferometer PSF varies across an image mosaic and with frequency.  This means that, once deconvolved, the cleaned up beam is _also_ a function of frequency and position.  [CASA](https://casa.nrao.edu) does an excellent job of tracking all these effects in detail.  However, it means that the resolution of the image varies through an image.  This can be non-ideal.  In theory, you can deconvolve the image with a `restoringbeam='common'` call, but current versions of CASA are buggy.  My student Eric K. found the following code snippet.  It builds a fake image with elliptical resolution elements.  The beam position angle rotates and the order of the beams varies in the cube... but the cube has the same resolution elements.
