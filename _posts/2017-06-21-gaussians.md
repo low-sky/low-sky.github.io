@@ -80,7 +80,7 @@ We can thus find the convolution kernel, and we usually then proceed with a digi
 
 To avoid this problem we can go ahead an construct these thin kernels in the Fourier domain.  This is also formally incorrect.  Since the kernel is not Nyquist sampled in the original domain, the kernel should formally extend out to the edge of the Fourier domain without going to zero.  This is formally problematic since the Fourier domain has a toroidal topology (i.e., like a Pac-Man board) where moving off one side of the board wraps to the other side.  The convolution kernel runs right up to the edge of that domain.  However, I claim we can get away with this horrible feature as long as the original image data are Nyquist sampled.  In that case, there is no information in the image at high spatial frequencies, so the non-zero values of the kernel's Fourier transform will be multiplied by low amplitude values in the image Fourier transform.
 
-[Here's my attempt to code this.](https://github.com/Astroua/almaprops/blob/master/code/python/ftplane_convolution.py)
+[Here's my attempt to code this.](https://github.com/low-sky/py-low-sky/blob/master/ftplane_convolution.py)
 
 Now we have a complete framework: find the minimal bounding ellipse, all beams up to it using the Fourier domain as necessary. 
 
