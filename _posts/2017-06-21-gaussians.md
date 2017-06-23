@@ -63,7 +63,7 @@ $$
 \begin{eqnarray}
 \mathbf{x}^T \mathbf{A} \mathbf{x} -  \mathbf{x}^T \mathbf{B} \mathbf{x} & \ge 0 \\
 \mathbf{x}^T (\mathbf{A-B}) \mathbf{x}  & \ge 0.
-\end{eqnarray)
+\end{eqnarray}
 $$ 
 
 This particular form is familiar to linear algebraists since it is one of the conditions for the array $\mathbf{A-B}$ to be _non-negative_.  This must be true for all $\mathbf{x}$.  An array satisfies this form, then all its eigenvalues are non-negative or equivalently it hss a Cholesky decomposition.  Using this linaer algebra based test, we have a quick check on one ellipse being inside another.  
@@ -72,7 +72,7 @@ This constraint gives us a handle for performing an optimization.  We can minimi
 
 This can be accomplished in `scipy.optimize.minimize`.  There are nominally constrained optimization algorithms such as `COBYLA`, but they were not functioning as intended.  Instead, I opted for the simpler method `Nelder-Mead` and put on a term that caused the objective function to jump to infinity if the non-negative matrix constraint is not satisfied.  The code seems to perform well.  For our use case, we are only optimizing over of-order 100 ellipses.  For an initial condition, I selected the bounding circle with radius equal to the maximum semi-major axis across the set of ellipses.
 
-It turns out this is an area where we need work.  Finding the global minimum is tricky since it depends on the position angle (i.e., the optimization algorithms I tried do not really give a good convergence).  I've posed my first attempts [here](http://nbviewer.jupyter.org/gist/low-sky/1eba1ebebe3606d400da030d2024970f)
+It turns out this is an area where we need work.  Finding the global minimum is tricky since it depends on the position angle (i.e., the optimization algorithms I tried do not really give a good convergence).  I've posed my first attempts [here](http://nbviewer.jupyter.org/gist/low-sky/1eba1ebebe3606d400da030d2024970f).
 
 Now that we have a major and minor axis, the usual workflow is to then convolve by ellipses so that all planes / parts of the image have the same beam.  Having the maximum bounding ellipse ensures that every Gaussian can be convolved up to reach this elliptical size.  This takes advantage of the convolution of two elliptical Gaussians is a third elliptical Gaussian.  We can figure out the convolution kernel parameters that are needed to reach the target resolution. The math of this has been worked out and is already in the package `radio_beam` right about [here](https://github.com/radio-astro-tools/radio_beam/blob/master/radio_beam/beam.py#L316).
 
